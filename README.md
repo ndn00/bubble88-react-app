@@ -8,7 +8,7 @@ This React Native built app will be used by Bubble 88 to provide us with initial
 
 ## Installation
 
-Set up the local development tool [Expo](https://docs.expo.io/versions/latest/get-started/installation/) and related dependencies (node.js, Git).
+Set up the local development tool [Expo](https://docs.expo.io/versions/latest/get-started/installation/) and related dependencies (node.js, Git).\
 `
 yarn add eslint --dev   #https://eslint.org/docs/user-guide/getting-started
 npx eslint --init
