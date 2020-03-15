@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { FlatList, Text, View, TouchableOpacity, StyleSheet } from 'react-native';
 import TopLogo from '../../components/toplogo/index';
 import ScrollableTabView, { ScrollableTabBar, } from 'react-native-scrollable-tab-view';
-import MenuItem from '../../components/Item/MenuItem'
+
 
 const Categories = [
   { key: 0, title: 'Combination Sets' },
@@ -33,7 +33,7 @@ export default class MenuScreen extends Component {
           initialPage={0}
           renderTabBar={() => <ScrollableTabBar />}
         >
-          <FlatList
+          {/* <FlatList
             tabLabel='Combination Sets'
             data={this.state.menuItems}
             renderItem={({ item })=>(
@@ -60,7 +60,7 @@ export default class MenuScreen extends Component {
             renderItem={({ item })=>(
               <MenuItem item={item} onPress={console.log("pressed")}/>)}
             keyExtractor = {(item, index) => index.toString() }
-          />
+          /> */}
         </ScrollableTabView>
       </View>
     );
