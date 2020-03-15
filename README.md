@@ -10,21 +10,17 @@ This React Native built app will be used by Bubble 88 to provide us with initial
 ## Installation
 
 Set up the local development tool [Expo](https://docs.expo.io/versions/latest/get-started/installation/) and related dependencies (node.js, Git).\
-`
-yarn add eslint --dev   #https://eslint.org/docs/user-guide/getting-started
-npx eslint --init
-`
 
-`
-npm install eslint --save-dev\
-npx eslint --init\
-npm install @react-navigation/native\
-expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view\
-npm install @react-navigation/stack\
-npm install @react-navigation/bottom-tabs\
-npm i --save react-native-swiper@nightly\
-expo install react-native-maps\
-`
+```
+npm install eslint --save-dev
+npx eslint --init
+npm install @react-navigation/native
+expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+npm install @react-navigation/stack
+npm install @react-navigation/bottom-tabs
+npm i --save react-native-swiper@nightly
+expo install react-native-maps
+```
 
 
 ## Contributing
