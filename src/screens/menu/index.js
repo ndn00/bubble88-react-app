@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { FlatList, Text, View, TouchableOpacity, StyleSheet } from 'react-native';
 import TopLogo from '../../components/toplogo/index';
 import ScrollableTabView, { ScrollableTabBar, } from 'react-native-scrollable-tab-view';
+import { FONT_TITLE } from '../../styles';
 
 
 const Categories = [
@@ -31,36 +32,23 @@ export default class MenuScreen extends Component {
         <ScrollableTabView
           style={{ marginTop: 0 }}
           initialPage={0}
-          renderTabBar={() => <ScrollableTabBar />}
+          renderTabBar={() => <ScrollableTabBar 
+            activeTextColor='orange' 
+            underlineStyle={{backgroundColor: 'orange'}}
+            textStyle={FONT_TITLE}
+            tabStyle={{height: FONT_TITLE.fontSize*2*1.6}}
+            style={{height: FONT_TITLE.fontSize*2*1.6}}
+            />}
         >
-          {/* <FlatList
-            tabLabel='Combination Sets'
-            data={this.state.menuItems}
-            renderItem={({ item })=>(
-              <MenuItem item={item} onPress={console.log("pressed")}/>)}
-            keyExtractor = {(item, index) => index.toString() }
-          />
-          <FlatList
-            tabLabel='Bowl Noodles'
-            data={this.state.menuItems}
-            renderItem={({ item })=>(
-              <MenuItem item={item} onPress={console.log("pressed")}/>)}
-            keyExtractor = {(item, index) => index.toString() }
-          />
-          <FlatList
-            tabLabel='Hot Pot'
-            data={this.state.menuItems}
-            renderItem={({ item })=>(
-              <MenuItem item={item} onPress={console.log("pressed")}/>)}
-            keyExtractor = {(item, index) => index.toString() }
-          />
-          <FlatList
-            tabLabel='Vegetarian'
-            data={this.state.menuItems}
-            renderItem={({ item })=>(
-              <MenuItem item={item} onPress={console.log("pressed")}/>)}
-            keyExtractor = {(item, index) => index.toString() }
-          /> */}
+          
+          <Text tabLabel={'Sets'+'\n'+'ssfs'}>tab1</Text>
+          <Text tabLabel='Noodles'>tab2</Text>
+          <Text tabLabel='Tab3'>tab3</Text>
+          <Text tabLabel='Tab4'>tab4</Text>
+          <Text tabLabel='Tab5'>tab5</Text>
+          <Text tabLabel='Tab6'>tab6</Text>
+          <Text tabLabel='Tab7'>tab7</Text>
+          <Text tabLabel='Tab8'>tab8</Text>
         </ScrollableTabView>
       </View>
     );
