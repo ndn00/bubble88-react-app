@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react';
 import {
   View,
   Text,
@@ -6,28 +6,28 @@ import {
   StatusBar,
   Dimensions,
   StyleSheet,
-} from 'react-native'
+} from 'react-native';
 
 import Constants from 'expo-constants';
-import Swiper from 'react-native-swiper'
+import Swiper from 'react-native-swiper';
 
-import TopLogo from '../../components/toplogo/index'
+import TopLogo from '../../components/toplogo/index';
 
-//TODO: Refactor
-const { width, height } = Dimensions.get('window');
-const MARGIN = 20
-const BANNER_SIZE = 200
+// TODO: Refactor
+const {width, height} = Dimensions.get('window');
+const MARGIN = 20;
+const BANNER_SIZE = 200;
 
 export default class MainScreen extends Component {
   render() {
     return (
-      <View style={{ flex: 1, backgroundColor:'white' }}>
+      <View style={{flex: 1, backgroundColor: 'white'}}>
         <StatusBar hidden={true} />
         <TopLogo />
         <Text style={{fontSize: 22, fontFamily: 'Roboto', fontWeight: 'bold'}}>Featured Dishes</Text>
         <Text style={{fontSize: 22, fontFamily: 'Roboto', fontWeight: 'bold'}}>廚師推薦</Text>
         <Swiper style={{
-            height: BANNER_SIZE + MARGIN*3
+          height: BANNER_SIZE + MARGIN*3,
         }}
         >
 
@@ -37,14 +37,14 @@ export default class MainScreen extends Component {
                 {
                   width: null,
                   height: BANNER_SIZE,
-                  resizeMode: 'contain'
+                  resizeMode: 'contain',
                 }
               }
               source={require('../../../assets/noodle.jpg')}
             />
             <View style={
               {
-                alignItems: 'center'
+                alignItems: 'center',
               }
             }>
               <Text style={{fontSize: 17, fontFamily: 'Roboto'}}>House beef brisket noodle</Text>
@@ -58,14 +58,14 @@ export default class MainScreen extends Component {
                 {
                   width: null,
                   height: BANNER_SIZE,
-                  resizeMode: 'contain'
+                  resizeMode: 'contain',
                 }
               }
               source={require('../../../assets/hotpot.jpg')}
             />
             <View style={
               {
-                alignItems: 'center'
+                alignItems: 'center',
               }
             }>
               <Text style={{fontSize: 17, fontFamily: 'Roboto'}}>House beef brisket noodle</Text>
@@ -76,9 +76,8 @@ export default class MainScreen extends Component {
         </Swiper>
 
 
-
       </View>
-    )
+    );
   }
 }
 

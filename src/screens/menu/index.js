@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { FlatList, Text, View, TouchableOpacity, StyleSheet } from 'react-native';
 import TopLogo from '../../components/toplogo/index';
 import ScrollableTabView, { ScrollableTabBar, } from 'react-native-scrollable-tab-view';
-import { FONT_TITLE, MAIN_COLOR } from '../../styles';
-
+import { FONT_TITLE, PRIMARY_COLOR } from '../../styles';
+import SmallButton from '../../components/buttons/smallbutton/index'
+import MenuItem from '../../components/menuitem/index'
 
 const Categories = [
   { key: 0, title: 'Combination Sets' },
@@ -33,15 +34,29 @@ export default class MenuScreen extends Component {
           style={{ marginTop: 0 }}
           initialPage={0}
           renderTabBar={() => <ScrollableTabBar 
-            activeTextColor=MAIN_COLOR 
-            underlineStyle={{backgroundColor: MAIN_COLOR}}
+            activeTextColor={PRIMARY_COLOR} 
+            underlineStyle={{backgroundColor: PRIMARY_COLOR}}
             textStyle={FONT_TITLE}
             tabStyle={{height: FONT_TITLE.fontSize*2*1.6}}
             style={{height: FONT_TITLE.fontSize*2*1.6}}
             />}
         >
           
-          <Text tabLabel={'Sets'+'\n'+'ssfs'}>tab1</Text>
+          <View tabLabel={'Sets'+'\n'+'ssf'}
+            style={styles.container}>
+            <MenuItem item={{
+              image: 'http://www.bubble88.com/wp-content/uploads/2015/03/noodle.jpg',
+              name: 'House beef brisket noodle'+'\n'+'88牛錦麵',
+              price: 13.5,
+              handleSubmit: console.log("hello"),
+            }}/>
+            <MenuItem item={{
+              image: 'http://www.bubble88.com/wp-content/uploads/2015/03/appetizers.jpg',
+              name: 'Popcorn Chicken'+'\n'+'台式香腸',
+              price: 8.5,
+              handleSubmit: console.log("hello"),
+            }}/>
+          </View>
           <Text tabLabel='Noodles'>tab2</Text>
           <Text tabLabel='Tab3'>tab3</Text>
           <Text tabLabel='Tab4'>tab4</Text>
