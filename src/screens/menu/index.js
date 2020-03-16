@@ -33,7 +33,7 @@ export default class MenuScreen extends Component {
           style={{ marginTop: 0 }}
           initialPage={0}
           renderTabBar={() => <ScrollableTabBar 
-            activeTextColor=MAIN_COLOR 
+            activeTextColor={MAIN_COLOR} 
             underlineStyle={{backgroundColor: MAIN_COLOR}}
             textStyle={FONT_TITLE}
             tabStyle={{height: FONT_TITLE.fontSize*2*1.6}}
