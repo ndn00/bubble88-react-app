@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
   View,
   Image,
 } from 'react-native';
 
-import styles from './styles'
+import styles from './styles';
 
 export default class TopLogo extends Component {
   render() {
