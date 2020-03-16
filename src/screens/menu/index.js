@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { FlatList, Text, View, TouchableOpacity, StyleSheet } from 'react-native';
 import TopLogo from '../../components/toplogo/index';
 import ScrollableTabView, { ScrollableTabBar, } from 'react-native-scrollable-tab-view';
-import { FONT_TITLE, MAIN_COLOR } from '../../styles';
+import { FONT_TITLE, PRIMARY_COLOR } from '../../styles';
 
 
 const Categories = [
@@ -33,8 +33,8 @@ export default class MenuScreen extends Component {
           style={{ marginTop: 0 }}
           initialPage={0}
           renderTabBar={() => <ScrollableTabBar 
-            activeTextColor={MAIN_COLOR} 
-            underlineStyle={{backgroundColor: MAIN_COLOR}}
+            activeTextColor={PRIMARY_COLOR} 
+            underlineStyle={{backgroundColor: PRIMARY_COLOR}}
             textStyle={FONT_TITLE}
             tabStyle={{height: FONT_TITLE.fontSize*2*1.6}}
             style={{height: FONT_TITLE.fontSize*2*1.6}}

@@ -1,20 +1,15 @@
 // Colors
-export const MAIN_COLOR = '#ee9647';
-export const BACKGROUND_COLOR = 'white';
-export const TILE_COLOR = 'gray';
-export const ITEM_COLOR = '#f2f2f2';
+export const PRIMARY_COLOR = '#ee9647'; // orange
+export const SECONDARY_COLOR = 'white';
+export const TERTIARY_COLOR = 'gray';
+export const QUARTERNARY_COLOR = '#f2f2f2'; // light gray
 
 // Buttons
-export const BUTTON_COLOR_LARGE = 'orange';
-export const BUTTON_TEXT_COLOR_LARGE = 'white';
 export const FONT_BUTTON_LARGE = {
   fontSize: 36,
   fontFamily: 'Roboto',
   fontWeight: 'bold',
 };
-export const BUTTON_COLOR_SMALL = 'white';
-export const BUTTON_TEXT_COLOR_SMALL = 'orange';
-export const BUTTON_BORDER_SMALL = 'orange';
 export const FONT_BUTTON_SMALL = {
   fontSize: 15,
   fontFamily: 'Roboto',
