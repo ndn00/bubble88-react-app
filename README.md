@@ -20,6 +20,10 @@ npm install @react-navigation/stack
 npm install @react-navigation/bottom-tabs
 npm i --save react-native-swiper@nightly
 expo install react-native-maps
+yarn add react-native-tab-view
+yarn add react-native-elements
+yarn add react-native-scrollable-tab-view
+
 ```
 
 
