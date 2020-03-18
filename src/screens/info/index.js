@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 
 import TopLogo from '../../components/toplogo/index';
+<<<<<<< HEAD
 import {
   LATITUDE,
   LONGITUDE,
@@ -17,6 +18,8 @@ import {
   MARGIN,
   WIDTH
 } from '../../styles/index'
+=======
+>>>>>>> 12854196db2bba4f15c1fe270ec0d17b8884f363
 
 export default class InfoScreen extends Component {
   render() {
@@ -27,6 +30,7 @@ export default class InfoScreen extends Component {
           <MapView
             style={styles.mapStyle}
             initialRegion={{
+<<<<<<< HEAD
               latitude: LATITUDE,
               longitude: LONGITUDE,
               latitudeDelta: LATITUDE_DELTA,
@@ -36,6 +40,17 @@ export default class InfoScreen extends Component {
             <Marker coordinate={{
               latitude: LATITUDE,
               longitude: LONGITUDE,
+=======
+              latitude: 49.188173,
+              longitude: -122.846545,
+              latitudeDelta: 0.0230,
+              longitudeDelta: 0.0105,
+            }}
+          >
+            <Marker coordinate={{
+              latitude: 49.188173,
+              longitude: -122.846545,
+>>>>>>> 12854196db2bba4f15c1fe270ec0d17b8884f363
             }}>
               <Image
                 styles={{height: 100, width: null}}
@@ -49,6 +64,12 @@ export default class InfoScreen extends Component {
   }
 }
 
+<<<<<<< HEAD
+=======
+const {width, height} = Dimensions.get('window');
+const MARGIN = 20;
+
+>>>>>>> 12854196db2bba4f15c1fe270ec0d17b8884f363
 const styles = StyleSheet.create({
   mapContainer: {
     backgroundColor: 'gray',
@@ -56,7 +77,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   mapStyle: {
+<<<<<<< HEAD
     width: WIDTH,
     height: WIDTH-MARGIN*3,
+=======
+    width: width,
+    height: width - MARGIN * 3,
+>>>>>>> 12854196db2bba4f15c1fe270ec0d17b8884f363
   },
 });

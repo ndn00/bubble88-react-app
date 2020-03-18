@@ -8,7 +8,11 @@ const styles = StyleSheet.create({
     height: cfg.LOGO_SIZE+cfg.BORDER_RADIUS+cfg.MARGIN,
     borderRadius: cfg.BORDER_RADIUS,
     top: -cfg.BORDER_RADIUS,
+<<<<<<< HEAD
     backgroundColor: '#ee9647',
+=======
+    backgroundColor: cfg.PRIMARY_COLOR,
+>>>>>>> 12854196db2bba4f15c1fe270ec0d17b8884f363
     justifyContent: 'center',
     alignItems: 'center',
   },
