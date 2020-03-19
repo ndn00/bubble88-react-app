@@ -33,25 +33,14 @@ export default class MenuScreen extends Component {
         <ScrollableTabView
           style={{ marginTop: 0 }}
           initialPage={0}
-<<<<<<< HEAD
           renderTabBar={() => <ScrollableTabBar
-            activeTextColor= {MAIN_COLOR}
-            underlineStyle={{backgroundColor: MAIN_COLOR}}
-=======
-          renderTabBar={() => <ScrollableTabBar 
-            activeTextColor={PRIMARY_COLOR} 
+            activeTextColor={PRIMARY_COLOR}
             underlineStyle={{backgroundColor: PRIMARY_COLOR}}
->>>>>>> 12854196db2bba4f15c1fe270ec0d17b8884f363
             textStyle={FONT_TITLE}
             tabStyle={{height: FONT_TITLE.fontSize*2*1.6}}
             style={{height: FONT_TITLE.fontSize*2*1.6}}
             />}
         >
-<<<<<<< HEAD
-
-          <Text tabLabel={'Sets'+'\n'+'ssfs'}>tab1</Text>
-=======
-          
           <View tabLabel={'Sets'+'\n'+'ssf'}
             style={styles.container}>
             <MenuItem item={{
@@ -67,7 +56,6 @@ export default class MenuScreen extends Component {
               handleSubmit: console.log("hello"),
             }}/>
           </View>
->>>>>>> 12854196db2bba4f15c1fe270ec0d17b8884f363
           <Text tabLabel='Noodles'>tab2</Text>
           <Text tabLabel='Tab3'>tab3</Text>
           <Text tabLabel='Tab4'>tab4</Text>
