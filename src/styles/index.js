@@ -34,10 +34,10 @@ export const MARGIN = 20;
 
 export const LOGO_SIZE = 100;
 export const BORDER_RADIUS = 20;
-export const BANNER_SIZE = 200
+export const BANNER_SIZE = 200;
 
 // Constants
-export const LATITUDE = 49.188173
-export const LONGITUDE = -122.846545
-export const LATITUDE_DELTA = 0.0230
-export const LONGITUDE_DELTA = 0.0105
+export const LATITUDE = 49.188173;
+export const LONGITUDE = -122.846545;
+export const LATITUDE_DELTA = 0.0230;
+export const LONGITUDE_DELTA = 0.0105;

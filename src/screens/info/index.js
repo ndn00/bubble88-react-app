@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
 import MapView, {Marker} from 'react-native-maps';
 import {
-  Text,
   View,
   Image,
   StyleSheet,
-  Dimensions,
 } from 'react-native';
 
 import TopLogo from '../../components/toplogo/index';
@@ -15,8 +13,8 @@ import {
   LATITUDE_DELTA,
   LONGITUDE_DELTA,
   MARGIN,
-  WIDTH
-} from '../../styles/index'
+  WIDTH,
+} from '../../styles/index';
 
 export default class InfoScreen extends Component {
   render() {

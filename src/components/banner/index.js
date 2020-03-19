@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
   View,
   Text,
@@ -6,7 +6,7 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import { BANNER_SIZE, FONT_TEXT } from '../../styles/index';
+import {BANNER_SIZE, FONT_TEXT} from '../../styles/index';
 
 export default class Banner extends Component {
   render() {
@@ -33,5 +33,5 @@ const styles = StyleSheet.create({
   },
   textContainer: {
     alignItems: 'center',
-  }
+  },
 });
