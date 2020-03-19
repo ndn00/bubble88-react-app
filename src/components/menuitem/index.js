@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {TouchableOpacity, Text, View, Image, StyleSheet} from 'react-native';
-import SmallButton from '../buttons/smallbutton'
+import SmallButton from '../buttons/smallbutton';
 import {PRIMARY_COLOR,
   SECONDARY_COLOR,
   FONT_BUTTON_SMALL,
@@ -11,16 +11,20 @@ export default class MenuItem extends Component {
   render() {
     return (
       <TouchableOpacity style={styles.container} activeOpacity={1}>
-        <Image resizeMode={'contain'} style={styles.image} source={{uri: this.props.item.image}} />
+        <Image
+          resizeMode={'contain'}
+          style={styles.image}
+          source={{uri: this.props.item.image}}
+        />
         <View style={styles.textContainer}>
           <View>
             <Text style={FONT_TEXT}>{this.props.item.name}</Text>
           </View>
           <View style={{height: 20}}/>
           <View style={styles.lowerContainer}>
-            <Text style={FONT_TEXT,{fontWeight: 'bold'}}>${this.props.item.price}</Text>
+            <Text style={FONT_TEXT, {fontWeight: 'bold'}}>${this.props.item.price}</Text>
             <View style={styles.buttonContainer}>
-              <SmallButton title={"Add SDF"} onPress={this.props.item.handleSubmit}/>
+              <SmallButton title={'Add SDF'} onPress={this.props.item.handleSubmit}/>
             </View>
           </View>
         </View>
@@ -50,10 +54,10 @@ const styles = StyleSheet.create({
   lowerContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   buttonContainer: {
-    flexDirection:'row',
-    alignItems:'center',
-  }
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
 });

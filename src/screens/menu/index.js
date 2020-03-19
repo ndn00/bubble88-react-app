@@ -22,26 +22,25 @@ const Categories = [
 export default class MenuScreen extends Component {
   state = {
     menuItems: [
-      // {name: 'Curry popcorn chicken rice', price: '$13', 
+      // {name: 'Curry popcorn chicken rice', price: '$13',
       //   image='http://www.bubble88.com/wp-content/uploads/2015/03/comboset.png'}
     ],
   }
   render() {
     return (
       <View style={styles.container}>
-        <TopLogo/>  
+        <TopLogo/>
         <ScrollableTabView
           style={{ marginTop: 0 }}
           initialPage={0}
-          renderTabBar={() => <ScrollableTabBar 
-            activeTextColor={PRIMARY_COLOR} 
+          renderTabBar={() => <ScrollableTabBar
+            activeTextColor={PRIMARY_COLOR}
             underlineStyle={{backgroundColor: PRIMARY_COLOR}}
             textStyle={FONT_TITLE}
             tabStyle={{height: FONT_TITLE.fontSize*2*1.6}}
             style={{height: FONT_TITLE.fontSize*2*1.6}}
             />}
         >
-          
           <View tabLabel={'Sets'+'\n'+'ssf'}
             style={styles.container}>
             <MenuItem item={{
