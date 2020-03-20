@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 
 import TopLogo from '../../components/toplogo/index';
-import PaymentWidget from '../../components/paymentwidget/index';
+import PaymentWidget from '../../components/payment_widget/index';
 
 export default class CartScreen extends Component {
   render() {
