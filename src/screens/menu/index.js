@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import { FlatList, Text, View, TouchableOpacity, StyleSheet } from 'react-native';
+import { FlatList, Text, View, TouchableOpacity, StyleSheet, TouchableHighlight } from 'react-native';
 import TopLogo from '../../components/toplogo/index';
-import ScrollableTabView, { ScrollableTabBar, } from 'react-native-scrollable-tab-view';
-import { FONT_TITLE, PRIMARY_COLOR } from '../../styles';
+import { FONT_TITLE, PRIMARY_COLOR, FONT_TEXT, MARGIN } from '../../styles';
 import SmallButton from '../../components/buttons/smallbutton/index'
 import MenuItem from '../../components/menu_item/index'
 
-const Categories = [
-  { key: 0, title: 'Combination Sets' },
+const categories = [
+  { key: 0, title: 'Combination' },
   { key: 1, title: 'Bowl Noodles'},
   { key: 2, title: 'Hot Pot'},
   { key: 3, title: 'Vegetarian'},
@@ -19,39 +18,41 @@ const Categories = [
   { key: 9, title: 'Dim Sum'},
 ]
 
-const category2index = {
-  "Noodles": 0,
-  "Rice": 1
-}
-
 export default class MenuScreen extends Component {
+
   state = {
-    menuItems: [
-      // {name: 'Curry popcorn chicken rice', price: '$13',
-      //   image='http://www.bubble88.com/wp-content/uploads/2015/03/comboset.png'}
-    ],
-    page: 1
+    currentIndex: 0
   }
 
-
+  handleChange = item => {
+    this.setState({currentIndex: item.key})
+  }
 
   render() {
     return (
       <View style={styles.container}>
         <TopLogo/>
-        <ScrollableTabView
-          style={{ marginTop: 0 }}
-          page={category2index[this.props.route.params.category]}
-          renderTabBar={
-            () => <ScrollableTabBar
-                    activeTextColor={PRIMARY_COLOR}
-                    underlineStyle={{backgroundColor: PRIMARY_COLOR}}
-                    textStyle={FONT_TITLE}
-                    tabStyle={{height: FONT_TITLE.fontSize*2*1.6}}
-                    style={{height: FONT_TITLE.fontSize*2*1.6}}W
-                  />
-          }
-        >
+        <View style={{height: 50}}>
+          <FlatList
+            horizontal={true}
+            data={categories}
+            renderItem={({item}) => (
+              <TouchableOpacity style={{
+                  borderRightWidth: 2,
+                  width: 120,
+                  height: 40,
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}
+                underlayColor={'orange'}
+                onPress={() => this.handleChange(item)}
+              >
+                <Text style={FONT_TEXT}>{item.title}</Text>
+              </TouchableOpacity>
+            )}
+            keyExtractor = {(item) => item.key}
+          />
+        </View>
           <View
             tabLabel={'Noodles'}
             style={styles.container}
@@ -69,14 +70,6 @@ export default class MenuScreen extends Component {
               handleSubmit: console.log("hello"),
             }}/>
           </View>
-          <Text tabLabel='Rice'>tab2</Text>
-          <Text tabLabel='Tab3'>tab3</Text>
-          <Text tabLabel='Tab4'>tab4</Text>
-          <Text tabLabel='Tab5'>tab5</Text>
-          <Text tabLabel='Tab6'>tab6</Text>
-          <Text tabLabel='Tab7'>tab7</Text>
-          <Text tabLabel='Tab8'>tab8</Text>
-        </ScrollableTabView>
       </View>
     );
   }
