@@ -15,7 +15,7 @@ export const FONT_BUTTON_SMALL = {
   fontFamily: 'Roboto',
 };
 export const FONT_TITLE = {
-  fontSize: 22,
+  fontSize: 20,
   fontFamily: 'Roboto',
   fontWeight: 'bold',
 };
@@ -34,7 +34,7 @@ export const MARGIN = 20;
 
 export const LOGO_SIZE = 100;
 export const BORDER_RADIUS = 20;
-export const BANNER_SIZE = 200;
+export const BANNER_SIZE = 160;
 
 // Constants
 export const LATITUDE = 49.188173;

@@ -4,7 +4,7 @@ import TopLogo from '../../components/toplogo/index';
 import ScrollableTabView, { ScrollableTabBar, } from 'react-native-scrollable-tab-view';
 import { FONT_TITLE, PRIMARY_COLOR } from '../../styles';
 import SmallButton from '../../components/buttons/smallbutton/index'
-import MenuItem from '../../components/menuitem/index'
+import MenuItem from '../../components/menu_item/index'
 
 const Categories = [
   { key: 0, title: 'Combination Sets' },
@@ -19,30 +19,43 @@ const Categories = [
   { key: 9, title: 'Dim Sum'},
 ]
 
+const category2index = {
+  "Noodles": 0,
+  "Rice": 1
+}
+
 export default class MenuScreen extends Component {
   state = {
     menuItems: [
       // {name: 'Curry popcorn chicken rice', price: '$13',
       //   image='http://www.bubble88.com/wp-content/uploads/2015/03/comboset.png'}
     ],
+    page: 1
   }
+
+
+
   render() {
     return (
       <View style={styles.container}>
         <TopLogo/>
         <ScrollableTabView
           style={{ marginTop: 0 }}
-          initialPage={0}
-          renderTabBar={() => <ScrollableTabBar
-            activeTextColor={PRIMARY_COLOR}
-            underlineStyle={{backgroundColor: PRIMARY_COLOR}}
-            textStyle={FONT_TITLE}
-            tabStyle={{height: FONT_TITLE.fontSize*2*1.6}}
-            style={{height: FONT_TITLE.fontSize*2*1.6}}
-            />}
+          page={category2index[this.props.route.params.category]}
+          renderTabBar={
+            () => <ScrollableTabBar
+                    activeTextColor={PRIMARY_COLOR}
+                    underlineStyle={{backgroundColor: PRIMARY_COLOR}}
+                    textStyle={FONT_TITLE}
+                    tabStyle={{height: FONT_TITLE.fontSize*2*1.6}}
+                    style={{height: FONT_TITLE.fontSize*2*1.6}}W
+                  />
+          }
         >
-          <View tabLabel={'Sets'+'\n'+'ssf'}
-            style={styles.container}>
+          <View
+            tabLabel={'Noodles'}
+            style={styles.container}
+          >
             <MenuItem item={{
               image: 'http://www.bubble88.com/wp-content/uploads/2015/03/noodle.jpg',
               name: 'House beef brisket noodle'+'\n'+'88牛錦麵',
@@ -56,7 +69,7 @@ export default class MenuScreen extends Component {
               handleSubmit: console.log("hello"),
             }}/>
           </View>
-          <Text tabLabel='Noodles'>tab2</Text>
+          <Text tabLabel='Rice'>tab2</Text>
           <Text tabLabel='Tab3'>tab3</Text>
           <Text tabLabel='Tab4'>tab4</Text>
           <Text tabLabel='Tab5'>tab5</Text>
