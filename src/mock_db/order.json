@@ -1,0 +1,71 @@
+name: 'Bubble 88'
+user: [
+  'Tim',
+  'Ian'
+]
+order_number:
+orders: [
+  {
+    id: 1,
+    first_name: 'Tony',
+    last_name: 'Shen',
+    phone_number: 7786819007,
+    order_time: 202003201117,
+    state: 'submitted',
+    notes: 'allergic to coke',
+    items: [
+      {
+        name: 'Fried Rice',
+        spec: 'White Pepper, Shredded Pork, Shredded Lamb'
+        cost: 15
+      },
+      {
+        name: 'Beef brisket noodle in soup',
+        spec: 'Pork Dumpling, Pork Wontons, Udon',
+        cost: 22
+      }
+    ]
+  },
+  {
+    id: 2,
+    first_name: 'Lina',
+    last_name: 'Su',
+    phone_number: 7786819007,
+    order_time: 202003201117,
+    state: 'ready',
+    notes: 'allergic to coke',
+    items: [
+      {
+        name: 'Fried Rice',
+        spec: 'White Pepper, Shredded Pork, Shredded Lamb'
+        cost: 15
+      },
+      {
+        name: 'Beef brisket noodle in soup',
+        spec: 'Pork Dumpling, Pork Wontons, Udon',
+        cost: 22
+      }
+    ]
+  },
+  {
+    id: 3,
+    first_name: 'Adam',
+    last_name: 'Liang',
+    phone_number: 7786819007,
+    order_time: 202003201117,
+    state: 'rejected',
+    notes: 'allergic to coke',
+    items: [
+      {
+        name: 'Fried Rice',
+        spec: 'White Pepper, Shredded Pork, Shredded Lamb'
+        cost: 15
+      },
+      {
+        name: 'Beef brisket noodle in soup',
+        spec: 'Pork Dumpling, Pork Wontons, Udon',
+        cost: 22
+      }
+    ]
+  },
+]
