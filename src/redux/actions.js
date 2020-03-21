@@ -6,7 +6,7 @@ export const addItem = (newItem) => ({
   payload: newItem,
 });
 
-export const deleteItem = (index) => ({
+export const deleteItem = (name) => ({
   type: DELETE_ITEM,
-  payload: index,
+  payload: name,
 });
