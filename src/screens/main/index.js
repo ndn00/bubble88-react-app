@@ -6,6 +6,7 @@ import {
   ScrollView,
   StatusBar,
   Dimensions,
+  StyleSheet
 } from 'react-native';
 import Swiper from 'react-native-swiper';
 
@@ -18,48 +19,60 @@ const banners = [
   {
     image: require('../../../assets/noodle.jpg'),
     englishName: 'House beef brisket noodle',
-    altName: '88牛錦麵',
+    altTitle: '88牛錦麵',
   },
   {
     image: require('../../../assets/hotpot.jpg'),
     englishName: 'Seafood hot pot with rice',
-    altName: '海鮮鍋',
+    altTitle: '海鮮鍋',
   },
 ];
-
 const categories = [
-  {
+  { key: 0, title: 'All', altTitle: '全部',
     image: require('../../../assets/noodle.jpg'),
-    englishName: 'Noodles',
-    altName: '麵類'
   },
-  {
-    image: require('../../../assets/rice.png'),
-    englishName: 'Rice',
-    altName: '飯類'
+  { key: 1, title: 'Combo', altTitle: '套餐',
+  image: require('../../../assets/noodle.jpg'),
   },
-  {
-    image: require('../../../assets/noodle.jpg'),
-    englishName: 'Noodles',
-    altName: '麵類'
+  { key: 2, title: 'Noodles', altTitle: '麵類',
+  image: require('../../../assets/noodle.jpg'),
   },
-  {
-    image: require('../../../assets/rice.png'),
-    englishName: 'Rice',
-    altName: '飯類'
-  }
+  { key: 3, title: 'Hot Pot', altTitle: '火鍋',
+  image: require('../../../assets/noodle.jpg'),
+  },
+  { key: 4, title: 'Vegetarian', altTitle: '素食',
+  image: require('../../../assets/noodle.jpg'),
+  },
+  { key: 5, title: 'Curry Rice', altTitle: '咖哩',
+  image: require('../../../assets/noodle.jpg'),
+  },
+  { key: 6, title: 'Clay Pot', altTitle: '鍋類',
+  image: require('../../../assets/noodle.jpg'),
+  },
+  { key: 7, title: 'Appetizers', altTitle: '開胃菜',
+  image: require('../../../assets/noodle.jpg'),
+  },
+  { key: 8, title: 'Hot Iron', altTitle: '鐵板燒',
+  image: require('../../../assets/noodle.jpg'),
+  },
+  { key: 9, title: 'Soup', altTitle: '湯類',
+  image: require('../../../assets/noodle.jpg'),
+  },
+  { key: 10, title: 'Dim Sum', altTitle: '點心',
+  image: require('../../../assets/noodle.jpg'),
+  },
 ]
 
 export default class MainScreen extends Component {
 
   onPressCategory = category => {
-    this.props.navigation.navigate('Menu', { category, key: Math.random() })
+    this.props.navigation.navigate('Menu', { category: category, key: Math.random() })
   }
 
 
   render() {
     return (
-      <ScrollView style={{flex: 1}}>
+      <View style={styles.container}>
         <StatusBar hidden={true} />
         <TopLogo />
         <View style={{left: MARGIN}}>
@@ -76,7 +89,7 @@ export default class MainScreen extends Component {
                 <Banner
                   image= {item.image}
                   englishName= {item.englishName}
-                  altName= {item.altName}
+                  altTitle= {item.altTitle}
                 />,
               )
             }
@@ -87,7 +100,13 @@ export default class MainScreen extends Component {
           <Text style={FONT_TITLE}>菜色分類</Text>
         </View>
         <HorizontalList data={categories} onPress={this.onPressCategory}/>
-      </ScrollView>
+      </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});

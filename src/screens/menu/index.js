@@ -43,80 +43,34 @@ class MenuScreen extends Component {
     uniqueKey: 0,
   }
 
-  // componentDidMount(){
-  //   if(category2index[this.props.route.params.category]!==this.currentIndex){
-  //     this.setState({currentIndex: category2index[this.props.route.params.category]})
-  //     this.setState({uniqueKey: this.props.route.params.key})
-  //   }
-  // }
+  static categoryIndex = (category) => {
+    let index = 0
+    categories.forEach((object) => {if(object.title===category) index=object.key})
+    return index
+  }
 
-  getIndex = category => {
-    for(var i = 0; i < categories.length; i++){
-      if (categories[i].title === category){
-        return categories[i].key
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if(nextProps.route.params.category !== undefined && nextProps.route.params.key !== undefined) {
+      return {
+        initIndex: MenuScreen.categoryIndex(nextProps.route.params.category),
+        uniqueKey: nextProps.route.params.key,
       }
     }
+    return null
   }
 
-  componentWillReceiveProps(nextProps) {
-    if(nextProps.route.params.category !== undefined && nextProps.route.params.key !== undefined) {
+  componentDidUpdate(prevProps, prevState) {
+    if(prevProps.uniqueKey!==this.props.uniqueKey){
       this.setState({
-          initIndex: category2index[nextProps.route.params.category],
-          uniqueKey: nextProps.route.params.key,
-      })
+        initIndex: this.categoryIndex(nextProps.route.params.category),
+        uniqueKey: nextProps.route.params.key,
+    })
     }
-  }
-
-  handleChange = item => {
-    this.setState({currentIndex: item.key})
   }
 
   handleAdd = item => {
     this.props.addItem(item)
   }
-
-  // render() {
-  //   return (
-  //     <View style={styles.container}>
-  //       <TopLogo/>
-  //       <View style={{height: 50}}>
-  //         <FlatList
-  //           horizontal={true}
-  //           showsHorizontalScrollIndicator={false}
-  //           data={categories}
-  //           renderItem={({item}) => (
-  //             <TouchableOpacity style={{
-  //                 borderRightWidth: 2,
-  //                 width: 120,
-  //                 height: 40,
-  //                 alignItems: 'center',
-  //                 justifyContent: 'center'
-  //               }}
-  //               underlayColor={'orange'}
-  //               onPress={() => this.handleChange(item)}
-  //             >
-  //               <Text style={FONT_TEXT}>{item.title}</Text>
-  //             </TouchableOpacity>
-  //           )}
-  //           keyExtractor = {(item) => item.key}
-  //         />
-  //       </View>
-  //       <ScrollView
-  //         tabLabel={'Noodles'}
-  //         style={styles.container}
-  //       >
-  //         {bubble88['menu'].map((item) =>
-  //           <MenuItem item={{
-  //             image: 'http://www.bubble88.com/wp-content/uploads/2015/03/noodle.jpg',
-  //             name: item.english_name + '\n' + item.alt_name,
-  //             price: item.price,
-  //             handleSubmit: ()=>this.handleAdd(item),
-  //           }}/>
-  //         )}
-  //       </ScrollView>
-  //     </View>
-  //   );
-  // }
 
   render() {
     return (
@@ -139,12 +93,12 @@ class MenuScreen extends Component {
           tabLabel={category.title}
           data={bubble88['menu']}
           renderItem={({item}) =>
-            <MenuItem item={{
+            ((item.category===category.title || category.title==='All')&&<MenuItem item={{
               image: 'http://www.bubble88.com/wp-content/uploads/2015/03/noodle.jpg',
               name: item.english_name + '\n' + item.alt_name,
               price: item.price,
               handleSubmit: ()=>this.handleAdd(item),
-            }}/>}
+            }}/>)}
           keyExtractor = {(item, index) => index.toString() }
         />
         ))}

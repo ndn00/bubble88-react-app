@@ -9,13 +9,16 @@ import {
 import {
   FONT_TEXT,
   PRIMARY_COLOR,
+  SECONDARY_COLOR,
+  TERTIARY_COLOR,
   MARGIN,
+  WIDTH,
 } from '../../styles/index'
 
 export default class BoxItem extends Component {
 
   handlePress = () => {
-    this.props.onPress(this.props.item.englishName)
+    this.props.onPress(this.props.item.title)
   }
 
   render() {
@@ -25,11 +28,11 @@ export default class BoxItem extends Component {
         onPress={this.handlePress}
       >
         <Image
-          style={{width:80,height:80}}
+          style={styles.image}
           resizeMode="contain"
           source={this.props.item.image} />
-        <Text style={FONT_TEXT}>{this.props.item.englishName}</Text>
-        <Text style={FONT_TEXT}>{this.props.item.altName}</Text>
+        <Text style={FONT_TEXT}>{this.props.item.title}</Text>
+        <Text style={FONT_TEXT}>{this.props.item.altTitle}</Text>
       </TouchableOpacity>
     );
   }
@@ -38,9 +41,17 @@ export default class BoxItem extends Component {
 const styles = StyleSheet.create({
   divCategory:{
     alignItems:'center',
-    borderWidth: 2,
+    borderWidth: 0,
+    borderColor: TERTIARY_COLOR,
     borderRadius:MARGIN,
     padding: MARGIN/2,
-    margin: MARGIN/2
+    marginLeft: MARGIN/1.5,
+    marginBottom: MARGIN,
+    marginTop: MARGIN/3,
+    backgroundColor: SECONDARY_COLOR,
   },
+  image:{
+    width:WIDTH/4.5,
+    height:WIDTH/4.5,
+  }
 });
