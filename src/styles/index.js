@@ -20,7 +20,7 @@ export const FONT_TITLE = {
   fontWeight: 'bold',
 };
 export const FONT_TEXT = {
-  fontSize: 17,
+  fontSize: 16,
   fontFamily: 'Roboto',
 };
 

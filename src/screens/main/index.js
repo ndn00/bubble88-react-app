@@ -53,13 +53,13 @@ const categories = [
 export default class MainScreen extends Component {
 
   onPressCategory = category => {
-    this.props.navigation.navigate('Menu', {"category": category})
+    this.props.navigation.navigate('Menu', { category, key: Math.random() })
   }
 
 
   render() {
     return (
-      <ScrollView style={{flex: 1, backgroundColor: 'white'}}>
+      <ScrollView style={{flex: 1}}>
         <StatusBar hidden={true} />
         <TopLogo />
         <View style={{left: MARGIN}}>
