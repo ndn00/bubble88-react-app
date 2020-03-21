@@ -48,14 +48,25 @@ const categories = [
 class MenuScreen extends Component {
 
   state = {
-    currentIndex: 0,
+    initIndex: 0,
+    uniqueKey: 0,
   }
 
   // componentDidMount(){
   //   if(category2index[this.props.route.params.category]!==this.currentIndex){
   //     this.setState({currentIndex: category2index[this.props.route.params.category]})
+  //     this.setState({uniqueKey: this.props.route.params.key})
   //   }
   // }
+
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.route.params.category !== undefined && nextProps.route.params.key !== undefined) {
+      this.setState({
+          initIndex: category2index[nextProps.route.params.category],
+          uniqueKey: nextProps.route.params.key,
+      })
+    }
+  }
 
   handleChange = item => {
     this.setState({currentIndex: item.key})
@@ -113,9 +124,9 @@ class MenuScreen extends Component {
       <View style={styles.container}>
         <TopLogo/>  
         <ScrollableTabView
-          key={this.props.route.params.key}
+          key={this.state.uniqueKey}
           style={{ marginTop: 0 }}
-          initialPage={category2index[this.props.route.params.category]}
+          initialPage={this.state.initIndex}
           renderTabBar={() => <ScrollableTabBar 
             activeTextColor='orange' 
             underlineStyle={{backgroundColor: 'orange'}}
