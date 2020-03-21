@@ -1,361 +1,1338 @@
 {
-	"name": "Bubble 88",
-	"banners": {
-		"House beef brisket noodle": {
-			"image_url": "<LINK>",
-			"english_name": "House beef brisket noodle",
-			"alt_name": "牛錦麵"
-		}
-	},
-	"location": {
-		"street_number": 10209,
-		"street_name": "King George Blvd",
-		"city": "Surrey",
-		"province": "BC",
-		"postal_code": "V3T2W6",
-		"country": "Canada",
-		"latitude": 49.188173,
-		"longitude": -122.846545
-	},
-	"styles": {
-		"colors": {
-			"primary_color": "#ee9647",
-			"secondary_color": "white",
-			"tertiary_color": "gray",
-			"quarternary_color": "#f2f2f2"
-		},
-		"font": {
-			"title": {
-				"fontSize": 22,
-				"fontFamily": "Roboto",
-				"fontWeight": "bold"
-			},
-			"text": {
-				"fontSize": 17,
-				"fontFamily": "Roboto"
-			}
-		}
-	},
-	"menu": [
-    {
-			"english_name": "Fried Rice",
-			"alt_name": "炒飯",
-			"price": 13,
-			"customizations": [0, 1]
-		},
-		{
-			"english_name": "Ground pork sauce & marinated egg on rice",
-			"alt_name": "滷肉飯",
-			"price": 8,
-			"customizations": [3]
-		},
-		{
-			"english_name": "Deep fried pork chop with rice",
-			"alt_name": "排骨飯",
-			"price": 11.5,
-			"customizations": [3]
-		},
-		{
-			"english_name": "Deep fried boneless chicken leg with rice",
-			"alt_name": "雞排飯",
-			"price": 11.5,
-			"customizations": [3]
-		},
-		{
-			"english_name": "Deep fried squid tentacles with rice",
-			"alt_name": "魷魚鬚飯 ",
-			"price": 11.5,
-			"customizations": [3]
-		},
-		{
-			"english_name": "Taiwanese sausage with rice",
-			"alt_name": "台式香腸飯 ",
-			"price": 12.5,
-			"customizations": [3]
-		},
-		{
-			"english_name": "Shredded beef or pork with green pepper on rice ",
-			"alt_name": "青椒肉絲(牛肉)燴飯",
-			"price": 11,
-			"customizations": [3]
-		},
-		{
-			"english_name": "Sliced beef in swirl egg sauce on rice ",
-			"alt_name": "滑蛋牛肉飯",
-			"price": 11,
-			"customizations": [3]
-		},
-		{
-			"english_name": "Prawns in swirl egg sauce on rice",
-			"alt_name": "滑蛋蝦仁飯 ",
-			"price": 12,
-			"customizations": [3]
-		},
-		{
-			"english_name": "Mapo tofu with minced pork and chili sauce with rice ",
-			"alt_name": "麻婆豆腐飯",
-			"price": 11,
-			"customizations": [3]
-		},
-		{
-			"english_name": "Pork & cabbage in plum sauce with rice",
-			"alt_name": "醬爆肉飯",
-			"price": 11,
-			"customizations": [3]
-		},
-		{
-			"english_name": "Stir-fried beef or pork & green onion in plum sauce with rice",
-			"alt_name": "蔥爆牛肉(豬肉)飯",
-			"price": 11,
-			"customizations": [3]
-		},
-		{
-			"english_name": "Deep fried fish fillet in chili sauce with rice",
-			"alt_name": "豆瓣魚排飯",
-			"price": 13,
-			"customizations": [3]
-		},
-		{
-			"english_name": "Sliced pork with garlic sauce with rice",
-			"alt_name": "蒜泥白肉飯",
-			"price": 11,
-			"customizations": [3]
-		},
-		{
-			"english_name": "Diced chicken in chili sauce with rice",
-			"alt_name": "辣子雞丁飯 ",
-			"price": 11,
-			"customizations": [3]
-		},
-		{
-			"english_name": "Diced chicken with peanuts & chili pepper with rice",
-			"alt_name": "宮保雞丁",
-			"price": 11,
-			"customizations": [3]
-		},
-		{
-			"english_name": "Diced beef with peanuts & chili pepper with rice",
-			"alt_name": "牛肉飯",
-			"price": 11,
-			"customizations": [3]
-		},
-		{
-			"english_name": "Prawns with peanuts & chili pepper with rice",
-			"alt_name": "宮保蝦仁飯 ",
-			"price": 13,
-			"customizations": [3]
-		},
-		{
-			"english_name": "Shredded pork or beef in garlic & chili sauce with rice",
-			"alt_name": "豆瓣魚排飯",
-			"price": 13,
-			"customizations": [3]
-		}
-	],
+   "name":"Bubble 88",
+   "banners":{
+      "House beef brisket noodle":{
+         "image_url":"<LINK>",
+         "english_name":"House beef brisket noodle",
+         "alt_name":"牛錦麵"
+      }
+   },
+   "location":{
+      "street_number":10209,
+      "street_name":"King George Blvd",
+      "city":"Surrey",
+      "province":"BC",
+      "postal_code":"V3T2W6",
+      "country":"Canada",
+      "latitude":49.188173,
+      "longitude":-122.846545
+   },
+   "styles":{
+      "colors":{
+         "primary_color":"#ee9647",
+         "secondary_color":"white",
+         "tertiary_color":"gray",
+         "quarternary_color":"#f2f2f2"
+      },
+      "font":{
+         "title":{
+            "fontSize":22,
+            "fontFamily":"Roboto",
+            "fontWeight":"bold"
+         },
+         "text":{
+            "fontSize":17,
+            "fontFamily":"Roboto"
+         }
+      }
+   },
+   "menu":[
+      {
+         "english_name":"Fried Rice",
+         "alt_name":"炒飯",
+         "price":13,
+         "customizations":[
+            0,
+            1
+         ]
+      },
+      {
+         "english_name":"Ground pork sauce & marinated egg on rice",
+         "alt_name":"滷肉飯",
+         "price":8,
+         "customizations":[
+            2
+         ]
+      },
+      {
+         "english_name":"Deep fried pork chop with rice",
+         "alt_name":"排骨飯",
+         "price":11.5,
+         "customizations":[
+            2
+         ]
+      },
+      {
+         "english_name":"Deep fried boneless chicken leg with rice",
+         "alt_name":"雞排飯",
+         "price":11.5,
+         "customizations":[
+            2
+         ]
+      },
+      {
+         "english_name":"Deep fried squid tentacles with rice",
+         "alt_name":"魷魚鬚飯 ",
+         "price":11.5,
+         "customizations":[
+            2
+         ]
+      },
+      {
+         "english_name":"Taiwanese sausage with rice",
+         "alt_name":"台式香腸飯 ",
+         "price":12.5,
+         "customizations":[
+            2
+         ]
+      },
+      {
+         "english_name":"Shredded beef or pork with green pepper on rice ",
+         "alt_name":"青椒肉絲(牛肉)燴飯",
+         "price":11,
+         "customizations":[
+            2,
+            3
+         ]
+      },
+      {
+         "english_name":"Sliced beef in swirl egg sauce on rice ",
+         "alt_name":"滑蛋牛肉飯",
+         "price":11,
+         "customizations":[
+            2
+         ]
+      },
+      {
+         "english_name":"Prawns in swirl egg sauce on rice",
+         "alt_name":"滑蛋蝦仁飯",
+         "price":12,
+         "customizations":[
+            2
+         ]
+      },
+      {
+         "english_name":"Mapo tofu with minced pork and chili sauce with rice ",
+         "alt_name":"麻婆豆腐飯",
+         "price":11,
+         "customizations":[
+            2
+         ]
+      },
+      {
+         "english_name":"Pork & cabbage in plum sauce with rice",
+         "alt_name":"醬爆肉飯",
+         "price":11,
+         "customizations":[
+            2
+         ]
+      },
+      {
+         "english_name":"Stir-fried beef or pork & green onion in plum sauce with rice",
+         "alt_name":"蔥爆牛肉(豬肉)飯",
+         "price":11,
+         "customizations":[
+            2,
+            3
+         ]
+      },
+      {
+         "english_name":"Deep fried fish fillet in chili sauce with rice",
+         "alt_name":"豆瓣魚排飯",
+         "price":13,
+         "customizations":[
+            2
+         ]
+      },
+      {
+         "english_name":"Sliced pork with garlic sauce with rice",
+         "alt_name":"蒜泥白肉飯",
+         "price":11,
+         "customizations":[
+            2
+         ]
+      },
+      {
+         "english_name":"Diced chicken in chili sauce with rice",
+         "alt_name":"辣子雞丁飯 ",
+         "price":11,
+         "customizations":[
+            2
+         ]
+      },
+      {
+         "english_name":"Diced chicken or beef with peanuts & chili pepper with rice",
+         "alt_name":"宮保雞丁/牛肉飯 ",
+         "price":11,
+         "customizations":[
+            2,
+            4
+         ]
+      },
+      {
+         "english_name":"Prawns with peanuts & chili pepper with rice",
+         "alt_name":"宮保蝦仁飯 ",
+         "price":13,
+         "customizations":[
+            2
+         ]
+      },
+      {
+         "english_name":"Shredded pork or beef in garlic & chili sauce with rice",
+         "alt_name":"魚香肉絲(牛肉)飯 ",
+         "price":11,
+         "customizations":[
+            2,
+            3
+         ]
+      },
+      {
+         "english_name":"Shredded pork or beef & dried tofu in chili sauce with rice",
+         "alt_name":"香乾肉絲(牛肉)飯 ",
+         "price":13,
+         "customizations":[
+            2,
+            3
+         ]
+      },
+      {
+         "english_name":"Three spice chicken with rice",
+         "alt_name":"三杯雞飯",
+         "price":13,
+         "customizations":[
+            2
+         ]
+      },
+      {
+         "english_name":"Prawns with pineapple & mayonnaise with rice",
+         "alt_name":"鳳梨蝦球飯",
+         "price":13,
+         "customizations":[
+            2
+         ]
+      },
+      {
+         "english_name":"Deep fried fish fillet in sweet & sour sauce with rice",
+         "alt_name":"糖醋魚排飯",
+         "price":13,
+         "customizations":[
+            2
+         ]
+      },
+      {
+         "english_name":"Sweet & sour chicken with rice",
+         "alt_name":"糖醋雞飯",
+         "price":12.5,
+         "customizations":[
+            2
+         ]
+      },
+      {
+         "english_name":"Sliced beef or pork in black pepper sauce with rice",
+         "alt_name":"黑胡椒牛肉(豬肉)飯",
+         "price":11,
+         "customizations":[
+            2,
+            3
+         ]
+      },
+      {
+         "english_name":"Pork & cabbage in chili sauce with rice",
+         "alt_name":"回鍋肉飯",
+         "price":11,
+         "customizations":[
+            2
+         ]
+      },
+      {
+         "english_name":"Satay beef or pork with rice",
+         "alt_name":"沙茶牛肉(豬肉)飯",
+         "price":11,
+         "customizations":[
+            2,
+            3
+         ]
+      },
+      {
+         "english_name":"Sliced lamb with cumin powder with rice",
+         "alt_name":"孜然羊肉飯",
+         "price":12.5,
+         "customizations":[
+            2
+         ]
+      },
+      {
+         "english_name":"Custom Iron Plate Grill",
+         "alt_name":"自製鐵板",
+         "price":16,
+         "customizations":[
+            4,
+            5,
+            6
+         ]
+      },
+      {
+         "english_name":"Lamb on hot iron plate with rice",
+         "alt_name":"鐵板羊肉飯",
+         "price":12,
+         "customizations":[
 
-	"Customisations": [{
-			"meta": {
-				"name": "Select a flavour",
-				"alt_name": "選擇任意一種口味",
-				"min_limit": 0,
-				"discounted": 1,
-				"max_limit": 10
-			},
-			"options": [{
-					"english_name": "White Pepper",
-					"alt_name": "原味",
-					"price": 0,
-					"alt_price": 1.5
-				},
-				{
-					"english_name": "Tomato",
-					"alt_name": "茄汁",
-					"price": 0,
-					"alt_price": 1.5
-				},
-				{
-					"english_name": "Satay",
-					"alt_name": "沙茶",
-					"price": 0,
-					"alt_price": 1.5
-				},
-				{
-					"english_name": "Black Pepper",
-					"alt_name": "黑胡椒",
-					"price": 0,
-					"alt_price": 1.5
-				},
-				{
-					"english_name": "Curry",
-					"alt_name": "咖哩",
-					"price": 0,
-					"alt_price": 1.5
-				},
-				{
-					"english_name": "Chili",
-					"alt_name": "豆瓣",
-					"price": 0,
-					"alt_price": 1.5
-				},
-				{
-					"english_name": "Kimchi",
-					"alt_name": "泡菜",
-					"price": 0,
-					"alt_price": 1.5
-				},
-				{
-					"english_name": "Soy Sauce",
-					"alt_name": "醬油",
-					"price": 0,
-					"alt_price": 1.5
-				},
-				{
-					"english_name": "XO Sauce",
-					"alt_name": "XO醬",
-					"price": 1,
-					"alt_price": 1.5
-				}
-			]
-		},
-		{
-			"meta": {
-				"name": "Select 2 toppings",
-				"alt_name": "選擇兩種材料",
-				"min_limit": 0,
-				"discounted": 2,
-				"max_limit": 10
-			},
-			"options": [{
-					"english_name": "Shredded Pork",
-					"alt_name": "豬肉",
-					"price": 0,
-					"alt_price": 2.5
-				},
-				{
-					"english_name": "Shredded Beef",
-					"alt_name": "牛肉",
-					"price": 0,
-					"alt_price": 2.5
-				},
-				{
-					"english_name": "Shredded Lamb",
-					"alt_name": "羊肉",
-					"price": 0,
-					"alt_price": 2.5
-				},
-				{
-					"english_name": "Diced Chicken",
-					"alt_name": "雞丁",
-					"price": 0,
-					"alt_price": 2.5
-				},
-				{
-					"english_name": "Sliced fish",
-					"alt_name": "鮮魚片",
-					"price": 0,
-					"alt_price": 2.5
-				},
-				{
-					"english_name": "Pineapple",
-					"alt_name": "鳳梨",
-					"price": 0,
-					"alt_price": 2.5
-				},
-				{
-					"english_name": "Squid",
-					"alt_name": "花枝",
-					"price": 0,
-					"alt_price": 2.5
-				},
-				{
-					"english_name": "Prawns",
-					"alt_name": "蝦子",
-					"price": 0,
-					"alt_price": 2.5
-				},
-				{
-					"english_name": "Fish Ball",
-					"alt_name": "魚丸",
-					"price": 0,
-					"alt_price": 2.5
-				},
-				{
-					"english_name": "Fish Cake",
-					"alt_name": "甜不辣",
-					"price": 0,
-					"alt_price": 2.5
-				},
-				{
-					"english_name": "Taiwanese Sausage",
-					"alt_name": "台式香腸",
-					"price": 0,
-					"alt_price": 2.5
-				},
-				{
-					"english_name": "Dried Tofu",
-					"alt_name": "豆干",
-					"price": 0,
-					"alt_price": 2.5
-				},
-				{
-					"english_name": "Cabbage",
-					"alt_name": "高麗菜",
-					"price": 0,
-					"alt_price": 2.5
-				},
-				{
-					"english_name": "Tri Color Beans",
-					"alt_name": "三色豆",
-					"price": 0,
-					"alt_price": 2.5
-				},
-				{
-					"english_name": "Green & Red Pepper",
-					"alt_name": "青紅椒",
-					"price": 0,
-					"alt_price": 2.5
-				},
-				{
-					"english_name": "Broccoli",
-					"alt_name": "百加利",
-					"price": 0,
-					"alt_price": 2.5
-				}
-			]
-		},
-		{
-			"meta": {
-				"name": "Additionals",
-				"alt_name": "",
-				"min_limit": 0,
-				"discounted": 0,
-				"max_limit": 10
-			},
-			"options": [{
-					"english_name": "Substitute lamb for additional",
-					"alt_name": "換羊肉",
-					"price": 0,
-					"alt_price": 1.5
-				},
-				{
-					"english_name": "Substitute rice for fried rice",
-					"alt_name": "飯換蛋炒飯",
-					"price": 0,
-					"alt_price": 3
-				},
-				{
-					"english_name": "Additional meat",
-					"alt_name": "加肉",
-					"price": 0,
-					"alt_price": 2.5
-				},
-				{
-					"english_name": "Additional vegetables",
-					"alt_name": "加菜",
-					"price": 0,
-					"alt_price": 1.5
-				}
-			]
-		}
-	]
+         ]
+      },
+      {
+         "english_name":"Beef on hot iron plate with rice",
+         "alt_name":"鐵板牛肉飯 ",
+         "price":12,
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Chicken on hot iron plate with rice",
+         "alt_name":"鐵板雞肉飯",
+         "price":12,
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Deep fried tofu on hot iron plate with rice",
+         "alt_name":"鐵板豆腐飯",
+         "price":12,
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Korean style BBQ pork with rice",
+         "alt_name":"鐵板燒肉飯",
+         "price":13.5,
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Eggplant with garlic chili meat sauce in clay pot with rice",
+         "alt_name":"魚香茄子煲",
+         "price":"12",
+         "customizations":[
+            7
+         ]
+      },
+      {
+         "english_name":"Stewed beef brisket with chinese cabbage & bamboo shoot in clay pot with rice",
+         "alt_name":"沙鍋牛腩煲",
+         "price":"13",
+         "customizations":[
+            7
+         ]
+      },
+      {
+         "english_name":"Half tendon half beef brisket with chili sauce in clay pot with rice",
+         "alt_name":"川味牛腩牛筋煲",
+         "price":"13",
+         "customizations":[
+            7
+         ]
+      },
+      {
+         "english_name":"Eggplant & pork intestine with basil in clay pot with rice",
+         "alt_name":"塔香茄腸煲",
+         "price":"12",
+         "customizations":[
+            7
+         ]
+      },
+      {
+         "english_name":"Popcorn chicken with curry on rice",
+         "alt_name":"咖哩鹽酥雞飯",
+         "price":"13",
+         "customizations":[
+            7
+         ]
+      },
+      {
+         "english_name":"Deep fried pork chop with curry on rice",
+         "alt_name":"咖哩排骨飯",
+         "price":"13",
+         "customizations":[
+            7
+         ]
+      },
+      {
+         "english_name":"Bean curd with enoki mushroom with rice",
+         "alt_name":"金菇腐皮卷飯",
+         "price":"12",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Deep fried tofu with vegetable on hot iron plate with rice",
+         "alt_name":"素鐵板豆腐飯",
+         "price":"12",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Oyster mushroom in three spice sauce with rice",
+         "alt_name":"三杯杏鮑菇飯",
+         "price":"12",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Stir-fried dry tofu slice and bamboo shoot with rice",
+         "alt_name":"香乾劍筍飯",
+         "price":"12",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Stewed tofu with mixed vegetable in clay pot with rice",
+         "alt_name":"素燴竹笙豆腐煲",
+         "price":"13",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Vegetarian Hakka stir fry with rice",
+         "alt_name":"素客家小炒飯",
+         "price":"12",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Taiwanese style spicy hot pot",
+         "alt_name":"台式麻辣鍋",
+         "price":"14",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Vegetable hot pot with rice",
+         "alt_name":"蔬菜鍋",
+         "price":"14",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Seafood hot pot with rice",
+         "alt_name":"海鮮鍋",
+         "price":"14",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Miso seafood hot pot with rice",
+         "alt_name":"味噌海鮮鍋",
+         "price":"14.5",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Spicy beef hot pot with rice",
+         "alt_name":"水煮牛肉鍋",
+         "price":"13",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Spicy lamb hot pot with rice",
+         "alt_name":"水煮羊肉鍋",
+         "price":"13.5",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Spicy fish hot pot with rice",
+         "alt_name":"水煮魚片鍋",
+         "price":"13.5",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Kimchi seafood hot pot",
+         "alt_name":"泡菜海鮮鍋",
+         "price":"14",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"House special curry seafood hot pot with rice",
+         "alt_name":"咖哩海鮮鍋",
+         "price":"14",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Fish & pickled cabbage hot pot with rice Seasonal (Winter Only)",
+         "alt_name":"酸菜魚肉鍋(季節性)",
+         "price":"13",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Sliced pork & sour cabbage hot pot with rice",
+         "alt_name":"酸白菜鍋",
+         "price":"13",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Chicken hot pot with ginseng & Chinese yam with rice",
+         "alt_name":"人參山藥雞鍋",
+         "price":"14",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Sesame oil chicken hot pot with Taiwanese vermicelli",
+         "alt_name":"麻油雞鍋麵線",
+         "price":"14",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Seaweed & egg drop soup",
+         "alt_name":"紫菜蛋花湯",
+         "price":"7",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Vegetable & tofu egg drop soup",
+         "alt_name":"青菜豆腐蛋花湯",
+         "price":"7.5",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Creamy corn soup",
+         "alt_name":"玉米湯",
+         "price":"7",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Wonton soup (8pcs)",
+         "alt_name":"餛飩湯(8pcs)",
+         "price":"8.5",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Pork blood with pork intestine in soup",
+         "alt_name":"豬血大腸湯",
+         "price":"8.5",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Hot and sour soup",
+         "alt_name":"酸辣湯",
+         "price":"9",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Beef brisket soup",
+         "alt_name":"牛肉湯",
+         "price":"8",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Marinated pork intestine",
+         "alt_name":"滷大腸",
+         "price":"4.5",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Marinated dried tofu",
+         "alt_name":"滷豆干",
+         "price":"4.5",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Marinated pork ear",
+         "alt_name":"滷豬耳",
+         "price":"4.5",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Marinated beef tripe",
+         "alt_name":"滷牛肚",
+         "price":"4.5",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Marinated egg (2pcs)",
+         "alt_name":"滷蛋(2個)",
+         "price":"4.5",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Two marinated items (Select any 2 marinated items)",
+         "alt_name":"滷味雙拼",
+         "price":"8.5",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Three marinated items (Select any 3 marinated items)",
+         "alt_name":"滷味三拼",
+         "price":"13",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Korean style kimchi",
+         "alt_name":"韓式泡菜",
+         "price":"4.5",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Sliced pork with garlic sauce",
+         "alt_name":"蒜泥白肉",
+         "price":"8",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Deep fried egg tofu",
+         "alt_name":"老皮嫩肉",
+         "price":"8.5",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Deep fried tofu",
+         "alt_name":"炸豆腐",
+         "price":"8",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Deep fried pork chop",
+         "alt_name":"炸排骨",
+         "price":"8",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Deep fried boneless chicken leg strips",
+         "alt_name":"炸雞排",
+         "price":"8",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Deep fried squid tentacles",
+         "alt_name":"炸魷魚鬚",
+         "price":"8",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Deep fried tempura (fish cake)",
+         "alt_name":"炸甜不辣",
+         "price":"8",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Deep fried wontons",
+         "alt_name":"炸餛飩(6個)",
+         "price":"7",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Deep fried wontons",
+         "alt_name":"炸餛飩(10個)",
+         "price":"8.5",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Popcorn chicken",
+         "alt_name":"鹽酥雞",
+         "price":"8.5",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Taiwanese sausage",
+         "alt_name":"台式香腸",
+         "price":"9",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Vegetable with minced pork sauce (seasonal)",
+         "alt_name":"燙青菜(季節性)",
+         "price":"7.5",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Pork wontons in chili sauce (10pcs)",
+         "alt_name":"紅油炒手(10個)",
+         "price":"8.5",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Egg roll",
+         "alt_name":"蛋餅",
+         "price":"7",
+         "customizations":[
+
+         ]
+      },
+      {
+         "english_name":"Chives and pork dumplings (10 pcs)",
+         "alt_name":"韭菜豬肉水餃",
+         "price":"8.5",
+         "customizations":[
+
+         ]
+      }
+   ],
+   "Customisations":[
+      {
+         "meta":{
+            "name":"Select a flavour",
+            "alt_name":"選擇任意一種口味",
+            "min_limit":0,
+            "discounted":1,
+            "max_limit":10
+         },
+         "options":[
+            {
+               "english_name":"White Pepper",
+               "alt_name":"原味",
+               "price":0,
+               "alt_price":1.5
+            },
+            {
+               "english_name":"Tomato",
+               "alt_name":"茄汁",
+               "price":0,
+               "alt_price":1.5
+            },
+            {
+               "english_name":"Satay",
+               "alt_name":"沙茶",
+               "price":0,
+               "alt_price":1.5
+            },
+            {
+               "english_name":"Black Pepper",
+               "alt_name":"黑胡椒",
+               "price":0,
+               "alt_price":1.5
+            },
+            {
+               "english_name":"Curry",
+               "alt_name":"咖哩",
+               "price":0,
+               "alt_price":1.5
+            },
+            {
+               "english_name":"Chili",
+               "alt_name":"豆瓣",
+               "price":0,
+               "alt_price":1.5
+            },
+            {
+               "english_name":"Kimchi",
+               "alt_name":"泡菜",
+               "price":0,
+               "alt_price":1.5
+            },
+            {
+               "english_name":"Soy Sauce",
+               "alt_name":"醬油",
+               "price":0,
+               "alt_price":1.5
+            },
+            {
+               "english_name":"XO Sauce",
+               "alt_name":"XO醬",
+               "price":1,
+               "alt_price":1.5
+            }
+         ]
+      },
+      {
+         "meta":{
+            "name":"Select 2 Meat toppings",
+            "alt_name":"選擇兩種材料",
+            "min_limit":0,
+            "discounted":2,
+            "max_limit":10
+         },
+         "options":[
+            {
+               "english_name":"Shredded Pork",
+               "alt_name":"豬肉",
+               "price":0,
+               "alt_price":2.5
+            },
+            {
+               "english_name":"Shredded Beef",
+               "alt_name":"牛肉",
+               "price":0,
+               "alt_price":2.5
+            },
+            {
+               "english_name":"Shredded Lamb",
+               "alt_name":"羊肉",
+               "price":0,
+               "alt_price":2.5
+            },
+            {
+               "english_name":"Diced Chicken",
+               "alt_name":"雞丁",
+               "price":0,
+               "alt_price":2.5
+            },
+            {
+               "english_name":"Sliced fish",
+               "alt_name":"鮮魚片",
+               "price":0,
+               "alt_price":2.5
+            },
+            {
+               "english_name":"Pineapple",
+               "alt_name":"鳳梨",
+               "price":0,
+               "alt_price":2.5
+            },
+            {
+               "english_name":"Squid",
+               "alt_name":"花枝",
+               "price":0,
+               "alt_price":2.5
+            },
+            {
+               "english_name":"Prawns",
+               "alt_name":"蝦子",
+               "price":0,
+               "alt_price":2.5
+            },
+            {
+               "english_name":"Fish Ball",
+               "alt_name":"魚丸",
+               "price":0,
+               "alt_price":2.5
+            },
+            {
+               "english_name":"Fish Cake",
+               "alt_name":"甜不辣",
+               "price":0,
+               "alt_price":2.5
+            },
+            {
+               "english_name":"Taiwanese Sausage",
+               "alt_name":"台式香腸",
+               "price":0,
+               "alt_price":2.5
+            },
+            {
+               "english_name":"Dried Tofu",
+               "alt_name":"豆干",
+               "price":0,
+               "alt_price":2.5
+            },
+            {
+               "english_name":"Cabbage",
+               "alt_name":"高麗菜",
+               "price":0,
+               "alt_price":2.5
+            },
+            {
+               "english_name":"Tri Color Beans",
+               "alt_name":"三色豆",
+               "price":0,
+               "alt_price":2.5
+            },
+            {
+               "english_name":"Green & Red Pepper",
+               "alt_name":"青紅椒",
+               "price":0,
+               "alt_price":2.5
+            },
+            {
+               "english_name":"Broccoli",
+               "alt_name":"百加利",
+               "price":0,
+               "alt_price":2.5
+            }
+         ]
+      },
+      {
+         "meta":{
+            "name":"Additionals",
+            "alt_name":"",
+            "min_limit":0,
+            "discounted":0,
+            "max_limit":10
+         },
+         "options":[
+            {
+               "english_name":"Substitute for lamb additional",
+               "alt_name":"換羊肉",
+               "price":0,
+               "alt_price":1.5
+            },
+            {
+               "english_name":"Substitute rice for fried rice",
+               "alt_name":"飯換蛋炒飯",
+               "price":0,
+               "alt_price":3
+            },
+            {
+               "english_name":"Additional meat",
+               "alt_name":"加肉",
+               "price":0,
+               "alt_price":2.5
+            },
+            {
+               "english_name":"Additional vegetables",
+               "alt_name":"加菜",
+               "price":0,
+               "alt_price":1.5
+            }
+         ]
+      },
+      {
+         "meta":{
+            "name":"Beef or Pork",
+            "alt_name":"牛肉/豬肉",
+            "min_limit":1,
+            "discounted":1,
+            "max_limit":1
+         },
+         "options":[
+            {
+               "english_name":"Beef",
+               "alt_name":"牛肉",
+               "price":0,
+               "alt_price":3
+            },
+            {
+               "english_name":"Pork",
+               "alt_name":"豬肉",
+               "price":0,
+               "alt_price":3
+            }
+         ]
+      },
+      {
+         "meta":{
+            "name":"Chicken or Beef",
+            "alt_name":"雞丁/牛肉",
+            "min_limit":1,
+            "discounted":1,
+            "max_limit":1
+         },
+         "options":[
+            {
+               "english_name":"Beef",
+               "alt_name":"牛肉",
+               "price":0,
+               "alt_price":3
+            },
+            {
+               "english_name":"Chicken",
+               "alt_name":"雞丁",
+               "price":0,
+               "alt_price":3
+            }
+         ]
+      },
+      {
+         "meta":{
+            "name":"Beef/Chicken/Pork",
+            "alt_name":"牛肉/雞丁/豬肉",
+            "min_limit":1,
+            "discounted":1,
+            "max_limit":1
+         },
+         "options":[
+            {
+               "english_name":"Beef",
+               "alt_name":"牛肉",
+               "price":0,
+               "alt_price":3
+            },
+            {
+               "english_name":"Chicken",
+               "alt_name":"雞丁",
+               "price":0,
+               "alt_price":3
+            },
+            {
+               "english_name":"Pork",
+               "alt_name":"豬肉",
+               "price":0,
+               "alt_price":3
+            }
+         ]
+      },
+      {
+         "meta":{
+            "name":"Select a sauce",
+            "alt_name":"選擇任意一種醬汁",
+            "min_limit":1,
+            "discounted":1,
+            "max_limit":3
+         },
+         "options":[
+            {
+               "english_name":"Black pepper sauce",
+               "alt_name":"黑椒醬",
+               "price":0,
+               "alt_price":2.5
+            },
+            {
+               "english_name":"Mushroom sauce",
+               "alt_name":"蘑菇醬",
+               "price":0,
+               "alt_price":2.5
+            }
+         ]
+      },
+      {
+         "meta":{
+            "name":"Select a main",
+            "alt_name":"選擇任意一種主餐 ",
+            "min_limit":1,
+            "discounted":1,
+            "max_limit":1
+         },
+         "options":[
+            {
+               "english_name":"Beef",
+               "alt_name":"牛肉",
+               "price":0,
+               "alt_price":3
+            },
+            {
+               "english_name":"Chicken",
+               "alt_name":"雞丁",
+               "price":0,
+               "alt_price":3
+            },
+            {
+               "english_name":"Deep Fried Pork",
+               "alt_name":"炸豬排",
+               "price":0,
+               "alt_price":3
+            },
+            {
+               "english_name":"Deep Fried Fish",
+               "alt_name":"炸魚排",
+               "price":0,
+               "alt_price":3
+            },
+            {
+               "english_name":"Deep Fried Tofu/Oyster Mushroom",
+               "alt_name":"豆腐/杏鮑菇",
+               "price":0,
+               "alt_price":3
+            }
+         ]
+      },
+      {
+         "meta":{
+            "name":"Select a base",
+            "alt_name":"牛肉/雞丁/豬肉",
+            "min_limit":1,
+            "discounted":1,
+            "max_limit":1
+         },
+         "options":[
+            {
+               "english_name":"Noodle",
+               "alt_name":"麵",
+               "price":0,
+               "alt_price":3
+            },
+            {
+               "english_name":"Rice",
+               "alt_name":"飯",
+               "price":0,
+               "alt_price":3
+            },
+            {
+               "english_name":"Udon",
+               "alt_name":"烏冬",
+               "price":2,
+               "alt_price":3
+            }
+         ]
+      },
+      {
+         "meta":{
+            "name":"Bowl of rice",
+            "alt_name":"牛肉/雞丁/豬肉",
+            "min_limit":0,
+            "discounted":0,
+            "max_limit":1
+         },
+         "options":[
+            {
+               "english_name":"Rice",
+               "alt_name":"飯",
+               "price":2,
+               "alt_price":2
+            }
+         ]
+      },
+      {
+         "meta":{
+            "name":"Select 2 Marinated Items",
+            "alt_name":"牛肉/雞丁/豬肉",
+            "min_limit":2,
+            "discounted":2,
+            "max_limit":2
+         },
+         "options":[
+            {
+               "english_name":"Marinated pork intestine",
+               "alt_name":"滷大腸",
+               "price":0,
+               "alt_price":2
+            },
+            {
+               "english_name":"Marinated dried tofu",
+               "alt_name":"飯",
+               "price":0,
+               "alt_price":2
+            },
+            {
+               "english_name":"Marinated pork ear",
+               "alt_name":"滷豬耳",
+               "price":0,
+               "alt_price":2
+            },
+            {
+               "english_name":"Marinated beef tripe",
+               "alt_name":"滷大腸",
+               "price":0,
+               "alt_price":2
+            },
+            {
+               "english_name":"Marinated pork intestine",
+               "alt_name":"滷牛肚",
+               "price":0,
+               "alt_price":2
+            },
+            {
+               "english_name":"Marinated egg (2pcs)",
+               "alt_name":"滷蛋(2個)",
+               "price":0,
+               "alt_price":2
+            }
+         ]
+      },
+      {
+         "meta":{
+            "name":"Select 3 Marinated Items",
+            "alt_name":"牛肉/雞丁/豬肉",
+            "min_limit":3,
+            "discounted":3,
+            "max_limit":3
+         },
+         "options":[
+            {
+               "english_name":"Marinated pork intestine",
+               "alt_name":"滷大腸",
+               "price":0,
+               "alt_price":2
+            },
+            {
+               "english_name":"Marinated dried tofu",
+               "alt_name":"飯",
+               "price":0,
+               "alt_price":2
+            },
+            {
+               "english_name":"Marinated pork ear",
+               "alt_name":"滷豬耳",
+               "price":0,
+               "alt_price":2
+            },
+            {
+               "english_name":"Marinated beef tripe",
+               "alt_name":"滷大腸",
+               "price":0,
+               "alt_price":2
+            },
+            {
+               "english_name":"Marinated pork intestine",
+               "alt_name":"滷牛肚",
+               "price":0,
+               "alt_price":2
+            },
+            {
+               "english_name":"Marinated egg (2pcs)",
+               "alt_name":"滷蛋(2個)",
+               "price":0,
+               "alt_price":2
+            }
+         ]
+      },
+      {
+         "meta":{
+            "name":"Select 2 Congee toppings",
+            "alt_name":"選擇兩種粥材料",
+            "min_limit":2,
+            "discounted":2,
+            "max_limit":2
+         },
+         "options":[
+            {
+               "english_name":"Intestine",
+               "alt_name":"大腸",
+               "price":0,
+               "alt_price":0
+            },
+            {
+               "english_name":"Pork",
+               "alt_name":"豬血",
+               "price":0,
+               "alt_price":0
+            },
+            {
+               "english_name":"Peanut",
+               "alt_name":"花生",
+               "price":0,
+               "alt_price":0
+            },
+            {
+               "english_name":"Shredded",
+               "alt_name":"香菇絲",
+               "price":0,
+               "alt_price":0
+            },
+            {
+               "english_name":"Shredded",
+               "alt_name":"豬肉",
+               "price":0,
+               "alt_price":0
+            },
+            {
+               "english_name":"Shredded",
+               "alt_name":"牛肉",
+               "price":0,
+               "alt_price":0
+            },
+            {
+               "english_name":"Shredded",
+               "alt_name":"羊肉",
+               "price":0,
+               "alt_price":0
+            },
+            {
+               "english_name":"Diced",
+               "alt_name":"雞丁",
+               "price":0,
+               "alt_price":0
+            },
+            {
+               "english_name":"Sliced",
+               "alt_name":"鮮魚片",
+               "price":0,
+               "alt_price":0
+            },
+            {
+               "english_name":"Squid",
+               "alt_name":"花枝",
+               "price":0,
+               "alt_price":0
+            },
+            {
+               "english_name":"Prawns",
+               "alt_name":"蝦子",
+               "price":0,
+               "alt_price":0
+            },
+            {
+               "english_name":"Fish",
+               "alt_name":"魚丸",
+               "price":0,
+               "alt_price":0
+            },
+            {
+               "english_name":"Cabbage",
+               "alt_name":"高麗菜",
+               "price":0,
+               "alt_price":0
+            },
+            {
+               "english_name":"Preserved",
+               "alt_name":"皮蛋",
+               "price":0,
+               "alt_price":0
+            }
+         ]
+      }
+   ]
 }
