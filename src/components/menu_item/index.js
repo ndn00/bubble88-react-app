@@ -37,7 +37,8 @@ const styles = StyleSheet.create({
   container: {
     width: WIDTH-MARGIN*2,
     height: WIDTH/3+MARGIN,
-    margin: MARGIN,
+    marginLeft: MARGIN,
+    marginTop: MARGIN*1.5,
     borderRadius: MARGIN,
     backgroundColor: SECONDARY_COLOR,
     flexDirection: 'row',
