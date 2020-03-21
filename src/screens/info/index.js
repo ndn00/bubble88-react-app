@@ -23,6 +23,7 @@ import {
 export default class InfoScreen extends Component {
   render() {
     return (
+      <ScrollView style={{flex: 1, backgroundColor: 'white'}}>
       <View style={styles.container}>
         <TopLogo />
         <Image
@@ -43,7 +44,7 @@ export default class InfoScreen extends Component {
             latitudeDelta: LATITUDE_DELTA*0.5,
             longitudeDelta: LONGITUDE_DELTA*0.5,
           }}
-          scrollEnabled={false}
+          scrollEnabled={true}
         >
           <Marker coordinate={{
             latitude: LATITUDE,
@@ -57,6 +58,7 @@ export default class InfoScreen extends Component {
         </MapView>
         </View>
       </View>
+      </ScrollView>
     );
   }
 }
