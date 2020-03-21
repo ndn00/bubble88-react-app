@@ -24,7 +24,7 @@ export default class MenuItem extends Component {
           <View style={styles.lowerContainer}>
             <Text style={FONT_TEXT, {fontWeight: 'bold'}}>${this.props.item.price}</Text>
             <View style={styles.buttonContainer}>
-              <SmallButton title={'Add SDF'} onPress={this.props.item.handleSubmit}/>
+              <SmallButton title={'Add 添加'} onPress={this.props.item.handleSubmit}/>
             </View>
           </View>
         </View>

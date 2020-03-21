@@ -1,24 +1,38 @@
 import React, { Component } from 'react';
-import { FlatList, Text, View, TouchableOpacity, StyleSheet, TouchableHighlight } from 'react-native';
+import {connect} from 'react-redux';
+import {
+  Text,
+  View,
+  FlatList,
+  ScrollView,
+  StyleSheet,
+  TouchableOpacity,
+  TouchableHighlight
+} from 'react-native';
+
 import TopLogo from '../../components/toplogo/index';
-import { FONT_TITLE, PRIMARY_COLOR, FONT_TEXT, MARGIN } from '../../styles';
 import SmallButton from '../../components/buttons/smallbutton/index'
 import MenuItem from '../../components/menu_item/index'
+import {addItem} from '../../redux/actions';
+
+import { FONT_TITLE, PRIMARY_COLOR, FONT_TEXT, MARGIN } from '../../styles';
+import bubble88 from '../../mock_db/menu.json';
 
 const categories = [
-  { key: 0, title: 'Combination' },
-  { key: 1, title: 'Bowl Noodles'},
-  { key: 2, title: 'Hot Pot'},
-  { key: 3, title: 'Vegetarian'},
-  { key: 4, title: 'Curry Rice'},
-  { key: 5, title: 'Clay Pot'},
-  { key: 6, title: 'Appetizers'},
-  { key: 7, title: 'Hot Iron'},
-  { key: 8, title: 'Soup'},
-  { key: 9, title: 'Dim Sum'},
+  { key: 0, title: 'All'},
+  { key: 1, title: 'Combo' },
+  { key: 2, title: 'Noodles'},
+  { key: 3, title: 'Hot Pot'},
+  { key: 4, title: 'Vegetarian'},
+  { key: 5, title: 'Curry Rice'},
+  { key: 6, title: 'Clay Pot'},
+  { key: 7, title: 'Appetizers'},
+  { key: 8, title: 'Hot Iron'},
+  { key: 9, title: 'Soup'},
+  { key: 10, title: 'Dim Sum'},
 ]
 
-export default class MenuScreen extends Component {
+class MenuScreen extends Component {
 
   state = {
     currentIndex: 0
@@ -28,9 +42,13 @@ export default class MenuScreen extends Component {
     this.setState({currentIndex: item.key})
   }
 
+  handleAdd = item => {
+    this.props.addItem(item)
+  }
+
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <TopLogo/>
         <View style={{height: 50}}>
           <FlatList
@@ -57,23 +75,21 @@ export default class MenuScreen extends Component {
             tabLabel={'Noodles'}
             style={styles.container}
           >
-            <MenuItem item={{
-              image: 'http://www.bubble88.com/wp-content/uploads/2015/03/noodle.jpg',
-              name: 'House beef brisket noodle'+'\n'+'88牛錦麵',
-              price: 13.5,
-              handleSubmit: console.log("hello"),
-            }}/>
-            <MenuItem item={{
-              image: 'http://www.bubble88.com/wp-content/uploads/2015/03/appetizers.jpg',
-              name: 'Popcorn Chicken'+'\n'+'台式香腸',
-              price: 8.5,
-              handleSubmit: console.log("hello"),
-            }}/>
+            {bubble88['menu'].map((item) =>
+              <MenuItem item={{
+                image: 'http://www.bubble88.com/wp-content/uploads/2015/03/noodle.jpg',
+                name: item.english_name + '\n' + item.alt_name,
+                price: item.price,
+                handleSubmit: ()=>this.handleAdd(item),
+              }}/>
+            )}
           </View>
-      </View>
+      </ScrollView>
     );
   }
 }
+
+export default connect(null, {addItem})(MenuScreen)
 
 const styles = StyleSheet.create({
   container: {

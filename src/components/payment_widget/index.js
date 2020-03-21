@@ -23,12 +23,18 @@ export default class PaymentWidget extends Component {
     this.updateTotal()
   }
 
+  componentDidUpdate(nextProps) {
+    if (nextProps !== this.props) {
+      this.updateTotal()
+    }
+  }
+
   render() {
     return (
       <View style={styles.payment}>
         <View style={styles.horizontal}>
           <Text style={FONT_TEXT}>Subtotal</Text>
-          <Text style={FONT_TEXT}>${this.props.subtotal}</Text>
+          <Text style={FONT_TEXT}>${this.props.subtotal.toFixed(2)}</Text>
         </View>
         <View style={styles.horizontal}>
           <Text style={FONT_TEXT}>Tax</Text>
@@ -38,11 +44,11 @@ export default class PaymentWidget extends Component {
           {borderBottomColor: 'grey',
            borderBottomWidth: StyleSheet.hairlineWidth}]}>
            <Text style={FONT_TEXT}>Discount</Text>
-           <Text style={FONT_TEXT}>- ${this.props.discount}</Text>
+           <Text style={FONT_TEXT}>- ${this.props.discount.toFixed(2)}</Text>
         </View>
         <View style={styles.horizontal}>
           <Text style={FONT_TITLE}>Total</Text>
-          <Text style={FONT_TITLE}>${this.state.total}</Text>
+          <Text style={FONT_TITLE}>${this.state.total.toFixed(2)}</Text>
         </View>
       </View>
     );
