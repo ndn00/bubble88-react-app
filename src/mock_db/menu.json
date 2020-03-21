@@ -36,6 +36,20 @@
          }
       }
    },
+   "categories":[
+     { "key": 0, "title": "All"},
+     { "key": 1, "title": "Combo" },
+     { "key": 2, "title": "Noodles"},
+     { "key": 3, "title": "Hot Pot"},
+     { "key": 4, "title": "Vegetarian"},
+     { "key": 5, "title": "Curry Rice"},
+     { "key": 6, "title": "Clay Pot"},
+     { "key": 7, "title": "Appetizers"},
+     { "key": 8, "title": "Hot Iron"},
+     { "key": 9, "title": "Soup"},
+     { "key": 10, "title": "Dim Sum"},
+   ],
+
    "menu":[
       {
          "english_name":"Fried Rice",
@@ -288,6 +302,402 @@
             2
          ]
       },
+         {
+            "english_name":"Shredded pork or beef with bamboo shoots with rice",
+            "alt_name":"劍筍肉絲(牛肉)飯",
+            "price":"12.5",
+            "customizations":[
+              2
+            ],
+            "catagories":[
+               "Combo"
+            ]
+         },
+         {
+            "english_name":"Pork intestine & pork blood in chili sauce with rice",
+            "alt_name":"五更腸旺鍋",
+            "price":"12.5",
+            "customizations":[
+              2
+            ],
+            "catagories":[
+               "Combo"
+            ]
+         },
+         {
+            "english_name":"Beef brisket & chili sauce with rice",
+            "alt_name":"五更牛腩鍋",
+            "price":"12.5",
+            "customizations":[
+              2
+            ],
+            "catagories":[
+               "Combo"
+            ]
+         },
+         {
+            "english_name":"Prawns with ketchup & chili sauce with rice",
+            "alt_name":"乾燒蝦球飯",
+            "price":"13",
+            "customizations":[
+              2
+            ],
+            "catagories":[
+               "Combo"
+            ]
+         },
+         {
+            "english_name":"House special spicy dried pot with rice",
+            "alt_name":"麻辣香鍋飯",
+            "price":"14.5",
+            "customizations":[
+              2
+            ],
+            "catagories":[
+               "Combo"
+            ]
+         },
+         {
+            "english_name":"Hainanense chicken with rice",
+            "alt_name":"海南雞飯",
+            "price":"13",
+            "customizations":[
+              2
+            ],
+            "catagories":[
+               "Combo"
+            ]
+         },
+         {
+            "english_name":"Hakka stir fry with rice",
+            "alt_name":"客家小炒飯",
+            "price":"13",
+            "customizations":[
+              2
+            ],
+            "catagories":[
+               "Combo"
+            ]
+         },
+         {
+            "english_name":"Homemade chicken in peanuts and chili sauce with rice (Cold dish)",
+            "alt_name":"椒麻雞飯",
+            "price":"12",
+            "customizations":[
+              2
+            ],
+            "catagories":[
+               "Combo"
+            ]
+         },
+         {
+            "english_name":"Deep fried boneless chicken in Thai chili sauce with rice",
+            "alt_name":"泰式椒麻雞飯",
+            "price":"13",
+            "customizations":[
+              2
+            ],
+            "catagories":[
+               "Combo"
+            ]
+         },
+         {
+            "english_name":"Popcorn chicken in black pepper sauce on rice",
+            "alt_name":"黑椒鹽酥雞飯",
+            "price":"13",
+            "customizations":[
+              2
+            ],
+            "catagories":[
+               "Combo"
+            ]
+         },
+         {
+            "english_name":"Deep fried boneless chicken leg in black pepper sauce on rice",
+            "alt_name":"黑椒雞排飯",
+            "price":"13",
+            "customizations":[
+              2
+            ],
+            "catagories":[
+               "Combo"
+            ]
+         },
+         {
+            "english_name":"Deep fried pork chop in black pepper sauce on rice",
+            "alt_name":"黑椒排骨飯",
+            "price":"13",
+            "customizations":[
+              2
+            ],
+            "catagories":[
+               "Combo"
+            ]
+         },
+         {
+            "english_name":"Deep fried fish fillet in black pepper sauce with rice",
+            "alt_name":"黑椒魚排飯",
+            "price":"13",
+            "customizations":[
+              2
+            ],
+            "catagories":[
+               "Combo"
+            ]
+         },
+            {
+               "english_name":"Beef brisket noodle in soup",
+               "alt_name":"牛肉麵",
+               "price":"12",
+               "customizations":[
+                  8
+               ],
+               "catagories":[
+                  "Noodles"
+               ]
+            },
+            {
+               "english_name":"Beef tendon noodle in soup",
+               "alt_name":"牛筋麵",
+               "price":"12.5",
+               "customizations":[
+                  8
+               ],
+               "catagories":[
+                  "Noodles"
+               ]
+            },
+            {
+               "english_name":"Noodle in beef soup (no meats)",
+               "alt_name":"牛肉湯麵",
+               "price":"9.5",
+               "customizations":[
+                  8
+               ],
+               "catagories":[
+                  "Noodles"
+               ]
+            },
+            {
+               "english_name":"Half tendon half brisket noodle in soup",
+               "alt_name":"半筋半肉麵",
+               "price":"12.5",
+               "customizations":[
+                  8
+               ],
+               "catagories":[
+                  "Noodles"
+               ]
+            },
+            {
+               "english_name":"Beef brisket noodle with tomato in soup",
+               "alt_name":"蕃茄牛肉麵",
+               "price":"12.5",
+               "customizations":[
+                  8
+               ],
+               "catagories":[
+                  "Noodles"
+               ]
+            },
+            {
+               "english_name":"Beef brisket noodle in special beef flavored chili oil soup",
+               "alt_name":"麻辣牛肉麵",
+               "price":"12.5",
+               "customizations":[
+                  8
+               ],
+               "catagories":[
+                  "Noodles"
+               ]
+            },
+            {
+               "english_name":"House special beef brisket noodle in soup",
+               "alt_name":"88牛錦麵",
+               "price":"13.5",
+               "customizations":[
+                  8
+               ],
+               "catagories":[
+                  "Noodles"
+               ]
+            },
+            {
+               "english_name":"Vegetable noodle in soup",
+               "alt_name":"陽春麵",
+               "price":"8.5",
+               "customizations":[
+                  8
+               ],
+               "catagories":[
+                  "Noodles"
+               ]
+            },
+            {
+               "english_name":"Meat sauce noodle & marinated egg",
+               "alt_name":"乾拌麵",
+               "price":"9.5",
+               "customizations":[
+                  8
+               ],
+               "catagories":[
+                  "Noodles"
+               ]
+            },
+            {
+               "english_name":"Hot and sour soup with noodle",
+               "alt_name":"酸辣麵",
+               "price":"11",
+               "customizations":[
+                  8
+               ],
+               "catagories":[
+                  "Noodles"
+               ]
+            },
+            {
+               "english_name":"Deep fried pork chop & noodle in soup",
+               "alt_name":"排骨麵",
+               "price":"11.5",
+               "customizations":[
+                  8
+               ],
+               "catagories":[
+                  "Noodles"
+               ]
+            },
+            {
+               "english_name":"Deep fried boneless chicken leg & noodle in soup",
+               "alt_name":"雞排麵",
+               "price":"11.5",
+               "customizations":[
+                  8
+               ],
+               "catagories":[
+                  "Noodles"
+               ]
+            },
+            {
+               "english_name":"Popcorn chicken & noodle in soup",
+               "alt_name":"鹽酥雞麵",
+               "price":"11.5",
+               "customizations":[
+                  8
+               ],
+               "catagories":[
+                  "Noodles"
+               ]
+            },
+            {
+               "english_name":"Squid tentacles & noodle in soup",
+               "alt_name":"魷魚鬚麵",
+               "price":"11.5",
+               "customizations":[
+                  8
+               ],
+               "catagories":[
+                  "Noodles"
+               ]
+            },
+            {
+               "english_name":"Chinese pickled radish & pork with noodle in soup",
+               "alt_name":"榨菜肉絲麵",
+               "price":"11",
+               "customizations":[
+                  8
+               ],
+               "catagories":[
+                  "Noodles"
+               ]
+            },
+            {
+               "english_name":"Hainanense chicken & noodle in Laksa soup",
+               "alt_name":"喇沙海南雞湯麵",
+               "price":"15",
+               "customizations":[
+                  8
+               ],
+               "catagories":[
+                  "Noodles"
+               ]
+            },
+            {
+               "english_name":"Seafood noodle in soup",
+               "alt_name":"海鮮湯麵",
+               "price":"13",
+               "customizations":[
+                  8
+               ],
+               "catagories":[
+                  "Noodles"
+               ]
+            },
+            {
+               "english_name":"Vegetable fried noodle",
+               "alt_name":"素炒麵",
+               "price":"11",
+               "customizations":[
+                  8
+               ],
+               "catagories":[
+                  "Noodles"
+               ]
+            },
+            {
+               "english_name":"Shredded (pork/beef/chicken) fried noodle",
+               "alt_name":"肉絲(牛肉/雞丁)炒麵",
+               "price":"11.5",
+               "customizations":[
+                  8
+               ],
+               "catagories":[
+                  "Noodles"
+               ]
+            },
+            {
+               "english_name":"Shredded (pork/beef/chicken) fried noodle w/ satay sauce",
+               "alt_name":"沙茶肉絲(牛肉/雞丁)炒麵",
+               "price":"12",
+               "customizations":[
+                  8
+               ],
+               "catagories":[
+                  "Noodles"
+               ]
+            },
+            {
+               "english_name":"Seafood fried noodle",
+               "alt_name":"海鮮炒麵",
+               "price":"13",
+               "customizations":[
+                  8
+               ],
+               "catagories":[
+                  "Noodles"
+               ]
+            },
+            {
+               "english_name":"Taiwanese style fried rice noodle",
+               "alt_name":"炒米粉",
+               "price":"11.5",
+               "customizations":[
+                  8
+               ],
+               "catagories":[
+                  "Noodles"
+               ]
+            },
+            {
+               "english_name":"Taiwanese style fried udon",
+               "alt_name":"台式炒烏冬",
+               "price":"11.5",
+               "customizations":[
+                  8
+               ],
+               "catagories":[
+                  "Noodles"
+               ]
+            },
       {
          "english_name":"Custom Iron Plate Grill",
          "alt_name":"自製鐵板",
@@ -396,6 +806,39 @@
          "category": "Curry Rice",
          "customizations":[
             7
+         ]
+      },
+      {
+         "english_name":"Deep fried boneless chicken leg with curry on rice",
+         "alt_name":"咖哩雞排飯",
+         "price":"13",
+         "customizations":[
+            7
+         ],
+         "catagories":[
+            "Curry Rice"
+         ]
+      },
+      {
+         "english_name":"Deep fried fish fillet with curry on rice",
+         "alt_name":"咖哩魚排飯",
+         "price":"13",
+         "customizations":[
+            7
+         ],
+         "catagories":[
+            "Curry Rice"
+         ]
+      },
+      {
+         "english_name":"Curry beef brisket with rice",
+         "alt_name":"咖喱牛腩飯",
+         "price":"13",
+         "customizations":[
+            7
+         ],
+         "catagories":[
+            "Curry Rice"
          ]
       },
       {
@@ -820,6 +1263,15 @@
          "customizations":[
 
          ]
+      },
+      {
+         "english_name":"Congee",
+         "alt_name":"粥",
+         "price":"8.5",
+         "category": "Appetizers",
+         "customizations":[
+           7
+         ]
       }
    ],
    "Customisations":[
@@ -1172,7 +1624,7 @@
       {
          "meta":{
             "name":"Select a base",
-            "alt_name":"牛肉/雞丁/豬肉",
+            "alt_name":"選擇任意一種主食",
             "min_limit":1,
             "discounted":1,
             "max_limit":1
@@ -1201,7 +1653,7 @@
       {
          "meta":{
             "name":"Bowl of rice",
-            "alt_name":"牛肉/雞丁/豬肉",
+            "alt_name":"飯",
             "min_limit":0,
             "discounted":0,
             "max_limit":1
@@ -1218,7 +1670,7 @@
       {
          "meta":{
             "name":"Select 2 Marinated Items",
-            "alt_name":"牛肉/雞丁/豬肉",
+            "alt_name":"滷味雙拼",
             "min_limit":2,
             "discounted":2,
             "max_limit":2
@@ -1265,7 +1717,7 @@
       {
          "meta":{
             "name":"Select 3 Marinated Items",
-            "alt_name":"牛肉/雞丁/豬肉",
+            "alt_name":"滷味三拼",
             "min_limit":3,
             "discounted":3,
             "max_limit":3
@@ -1401,6 +1853,41 @@
                "alt_name":"皮蛋",
                "price":0,
                "alt_price":0
+            }
+         ]
+      },
+      {
+         "meta":{
+            "name":"Noodle Additionals",
+            "alt_name":"牛肉/雞丁/豬肉",
+            "min_limit":0,
+            "discounted":0,
+            "max_limit":10
+         },
+         "options":[
+            {
+               "english_name":"pork dumplings(4pcs)",
+               "alt_name":"另加豬肉水餃",
+               "price":4,
+               "alt_price":4
+            },
+            {
+               "english_name":"pork wontons(4pcs)",
+               "alt_name":"另加餛飩",
+               "price":4,
+               "alt_price":4
+            },
+            {
+               "english_name":"Special beef flavored chili oil",
+               "alt_name":"另加豬肉水餃",
+               "price":0.5,
+               "alt_price":0.5
+            },
+            {
+               "english_name":"change to udon noodle",
+               "alt_name":"換烏冬麵",
+               "price":2,
+               "alt_price":2
             }
          ]
       }
