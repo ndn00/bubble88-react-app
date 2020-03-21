@@ -22,15 +22,6 @@ import {addItem} from '../../redux/actions';
 import { FONT_TITLE, PRIMARY_COLOR, FONT_TEXT, MARGIN } from '../../styles';
 import bubble88 from '../../mock_db/menu.json';
 
-
-
-const category2index = {
-  "Noodles": 0,
-  "Rice": 1
-}
-
-
-
 const categories = [
   { key: 0, title: 'All'},
   { key: 1, title: 'Combo' },
@@ -58,6 +49,14 @@ class MenuScreen extends Component {
   //     this.setState({uniqueKey: this.props.route.params.key})
   //   }
   // }
+
+  getIndex = category => {
+    for(var i = 0; i < categories.length; i++){
+      if (categories[i].title === category){
+        return categories[i].key
+      }
+    }
+  }
 
   componentWillReceiveProps(nextProps) {
     if(nextProps.route.params.category !== undefined && nextProps.route.params.key !== undefined) {
@@ -122,13 +121,13 @@ class MenuScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <TopLogo/>  
+        <TopLogo/>
         <ScrollableTabView
           key={this.state.uniqueKey}
           style={{ marginTop: 0 }}
           initialPage={this.state.initIndex}
-          renderTabBar={() => <ScrollableTabBar 
-            activeTextColor='orange' 
+          renderTabBar={() => <ScrollableTabBar
+            activeTextColor='orange'
             underlineStyle={{backgroundColor: 'orange'}}
             textStyle={FONT_TITLE}
             tabStyle={{height: FONT_TITLE.fontSize*2*1.6}}
@@ -149,7 +148,7 @@ class MenuScreen extends Component {
           keyExtractor = {(item, index) => index.toString() }
         />
         ))}
-          
+
         </ScrollableTabView>
       </View>
     );
