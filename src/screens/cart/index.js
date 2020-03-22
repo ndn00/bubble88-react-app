@@ -39,7 +39,7 @@ class CartScreen extends Component {
   updateCost = () => {
     var totalCost = 0
     for(var i = 0; i < this.props.items.length; i++){
-      totalCost += this.props.items[i].price
+      totalCost += parseFloat(this.props.items[i].price)
     }
     this.setState({cost: totalCost})
   }
