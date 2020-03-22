@@ -6,12 +6,12 @@ export const QUARTERNARY_COLOR = '#f2f2f2'; // light gray
 
 // Fonts
 export const FONT_BUTTON_LARGE = {
-  fontSize: 36,
+  fontSize: 20,
   fontFamily: 'Roboto',
   fontWeight: 'bold',
 };
 export const FONT_BUTTON_SMALL = {
-  fontSize: 15,
+  fontSize: 14,
   fontFamily: 'Roboto',
 };
 export const FONT_TITLE = {

@@ -6,7 +6,8 @@ import {
   SECONDARY_COLOR,
   FONT_BUTTON_SMALL,
   FONT_TEXT,
-  WIDTH
+  WIDTH,
+  MARGIN
 } from '../../styles/index';
 
 
@@ -26,15 +27,16 @@ export default class MenuItemLite extends Component {
     );
   }
 };
-const MARGIN = 10;
 const styles = StyleSheet.create({
   container: {
-    width: WIDTH-MARGIN*2,
-    margin: MARGIN,
+    width: WIDTH-MARGIN,
+    marginLeft: MARGIN/2,
+    marginTop: MARGIN/4,
+    marginBottom: MARGIN/4,
     borderRadius: MARGIN,
     backgroundColor: SECONDARY_COLOR,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    padding: MARGIN
+    padding: MARGIN/2,
   },
 });

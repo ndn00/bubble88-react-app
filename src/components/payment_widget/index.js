@@ -4,7 +4,8 @@ import { Text, View, StyleSheet } from 'react-native';
 import {
   FONT_TEXT,
   FONT_TITLE,
-  WIDTH
+  WIDTH,
+  SECONDARY_COLOR
 } from '../../styles/index'
 
 export default class PaymentWidget extends Component {
@@ -65,7 +66,8 @@ const styles = StyleSheet.create({
     borderColor: 'grey',
     borderWidth: 2,
     borderRadius: 10,
-    padding: 10
+    padding: 10,
+    backgroundColor: SECONDARY_COLOR,
   },
   horizontal: {
     flexDirection: 'row',

@@ -4,16 +4,17 @@ import {TouchableOpacity, Text, StyleSheet} from 'react-native';
 import {PRIMARY_COLOR,
   SECONDARY_COLOR,
   FONT_BUTTON_SMALL,
-  WIDTH} from '../../../styles/index';
+  WIDTH,
+  FONT_BUTTON_LARGE} from '../../../styles/index';
 
-export default class SmallButton extends Component {
+export default class BigButton extends Component {
   render() {
     return (
       <TouchableOpacity
         style={styles.button}
         onPress={this.props.onPress}
       >
-        <Text style={[FONT_BUTTON_SMALL, styles.buttonTextColor]}>
+        <Text style={[FONT_BUTTON_LARGE, styles.buttonTextColor]}>
           {this.props.title}
         </Text>
       </TouchableOpacity>
@@ -24,15 +25,13 @@ export default class SmallButton extends Component {
 const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
-    backgroundColor: SECONDARY_COLOR,
-    color: PRIMARY_COLOR,
-    borderColor: PRIMARY_COLOR,
-    borderWidth: 1,
-    padding: FONT_BUTTON_SMALL.fontSize*0.5,
+    backgroundColor: PRIMARY_COLOR,
+    color: SECONDARY_COLOR,
+    padding: FONT_BUTTON_LARGE.fontSize*0.5,
     borderRadius: 50,
-    width: WIDTH/3.5,
+    width: WIDTH*0.7,
   },
   buttonTextColor: {
-    color: PRIMARY_COLOR,
+    color: SECONDARY_COLOR,
   },
 });
