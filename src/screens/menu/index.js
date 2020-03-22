@@ -49,24 +49,35 @@ class MenuScreen extends Component {
     return index
   }
 
-  static getDerivedStateFromProps(nextProps, prevState) {
+  componentWillReceiveProps(nextProps) {
     if(nextProps.route.params.category !== undefined && nextProps.route.params.key !== undefined) {
-      return {
+      this.setState({
         initIndex: MenuScreen.categoryIndex(nextProps.route.params.category),
         uniqueKey: nextProps.route.params.key,
-      }
+      })
     }
-    return null
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    if(prevProps.uniqueKey!==this.props.uniqueKey){
-      this.setState({
-        initIndex: this.categoryIndex(nextProps.route.params.category),
-        uniqueKey: nextProps.route.params.key,
-    })
-    }
-  }
+
+  // static getDerivedStateFromProps(props, state) {
+  //   let update = {}
+
+  //   if(props.route.params.key !== undefined)
+  //     update.uniqueKey = props.route.params.key
+  //   if(props.route.params.category !== undefined)
+  //     update.initIndex = MenuScreen.categoryIndex(props.route.params.category)
+    
+  //   return update;
+  // }
+
+  // componentDidUpdate(prevProps, prevState) {
+  //   if(prevProps.uniqueKey!==this.props.uniqueKey){
+  //     this.setState({
+  //       initIndex: MenuScreen.categoryIndex(this.props.route.params.category),
+  //       uniqueKey: this.props.route.params.key,
+  //   })
+  //   }
+  // }
 
   handleAdd = item => {
     this.props.addItem(item)
