@@ -13,7 +13,8 @@ import TopLogo from '../../components/toplogo/index';
 import PaymentWidget from '../../components/payment_widget/index';
 import {deleteItem} from '../../redux/actions'
 
-import {FONT_TITLE} from '../../styles/index'
+import {FONT_TITLE, MARGIN} from '../../styles/index'
+import BigButton from '../../components/buttons/bigbutton';
 
 class CartScreen extends Component {
 
@@ -49,7 +50,7 @@ class CartScreen extends Component {
       <View style={styles.container}>
         <View>
           <TopLogo />
-          <View style={{alignItems: 'center'}}>
+          <View style={styles.top_title}>
             <Text style={FONT_TITLE}>Cart</Text>
           </View>
         </View>
@@ -62,11 +63,13 @@ class CartScreen extends Component {
               handleSubmit: ()=>this.handleRemove(item.english_name),
             }}/>
           )}
-          <View style={{justifyContent: 'flex-end', alignItems: 'center'}}>
-            <PaymentWidget subtotal={this.state.cost} tax={5} discount={10.00}/>
-            <Button title="Pay"/>
-          </View>
         </ScrollView>
+        <View style={styles.container2}>
+          <PaymentWidget subtotal={this.state.cost} tax={5} discount={10.00}/>
+        </View>
+        <View style={styles.container2}>
+          <BigButton title='Checkout (Pickup)' onPress={null}/>
+        </View>
       </View>
     );
   }
@@ -83,5 +86,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
+  },
+  container2: {
+    justifyContent: 'flex-end', 
+    alignItems: 'center',
+    marginBottom: MARGIN/2,
+  },
+  top_title: {
+    alignItems: 'center',
+    marginBottom: MARGIN/4,
+    marginTop: 0,
   },
 });
