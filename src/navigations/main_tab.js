@@ -3,8 +3,8 @@ import {Ionicons} from '@expo/vector-icons';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import MainScreen from '../screens/main/index';
-import CustomizeStack from './customize_stack'
-import ConfirmStack from './confirm_stack'
+import CustomizeStack from './customize_stack';
+import ConfirmStack from './confirm_stack';
 import InfoScreen from '../screens/info/index';
 
 const Tab = createBottomTabNavigator();
@@ -36,5 +36,5 @@ export default function TabNavigator() {
       <Tab.Screen name="Cart" component={ConfirmStack} />
       <Tab.Screen name="Info" component={InfoScreen} />
     </Tab.Navigator>
-  )
+  );
 }

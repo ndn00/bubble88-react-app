@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import { FlatList } from 'react-native'
+import React, {Component} from 'react';
+import {FlatList} from 'react-native';
 
-import BoxItem from '../box_item/index'
+import BoxItem from '../box_item/index';
 
 export default class HorizontalList extends Component {
   render() {
@@ -9,11 +9,11 @@ export default class HorizontalList extends Component {
       <FlatList
         horizontal={true}
         data={this.props.data}
-        renderItem={({ item }) => (
+        renderItem={({item}) => (
           <BoxItem item={item} onPress={this.props.onPress}/>
         )}
-        keyExtractor = {(item,index) => index.toString() }
+        keyExtractor = {(item, index) => index.toString() }
       />
-    )
+    );
   }
 }

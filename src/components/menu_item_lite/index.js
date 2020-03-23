@@ -7,9 +7,8 @@ import {
   FONT_BUTTON_SMALL,
   FONT_TEXT,
   WIDTH,
-  MARGIN
+  MARGIN,
 } from '../../styles/index';
-
 
 
 export default class MenuItemLite extends Component {
@@ -19,7 +18,7 @@ export default class MenuItemLite extends Component {
         <View style={{flex: 2}}>
           <Text style={FONT_TEXT}>{this.props.item.name}</Text>
         </View>
-        <View style={{flex: 1, alignItems:'flex-end'}}>
+        <View style={{flex: 1, alignItems: 'flex-end'}}>
           <Text style={FONT_TEXT, {fontWeight: 'bold'}}>${this.props.item.price}</Text>
           <SmallButton title={'Remove 删除'} onPress={this.props.item.handleSubmit}/>
         </View>
