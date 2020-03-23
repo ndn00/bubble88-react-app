@@ -13,7 +13,7 @@ import Swiper from 'react-native-swiper';
 import TopLogo from '../../components/toplogo/index';
 import Banner from '../../components/banner/index';
 import HorizontalList from '../../components/horizontal_list/index'
-import {FONT_TITLE, FONT_TEXT, MARGIN, BANNER_SIZE} from '../../styles/index';
+import {FONT_TITLE, FONT_TEXT, MARGIN, BANNER_SIZE, TERTIARY_COLOR, QUARTERNARY_COLOR} from '../../styles/index';
 
 const banners = [
   {
@@ -108,6 +108,6 @@ export default class MainScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white'
+    backgroundColor: QUARTERNARY_COLOR,
   },
 });
