@@ -176,18 +176,19 @@ export default class Database {
            }
     }
 
-    async inrementOrderState(orderID, restaurant){
+    async incrementOrderState(ORDER_ID, restaurant){
       const db = firebase.firestore();
       restaurant = restaurant.toLowerCase();
+      var orderID = ORDER_ID.toString();
       var orderRef = db.collection(restaurant+"Orders").doc(orderID);
       if (await orderRef.get().then(doc=>{return doc.exists})) {
         orderRef.update({
           state: firebase.firestore.FieldValue.increment(1)
         });
-        console.log("incremented order "+ orderID);
+        console.log("incremented order "+ orderID+"\n\n\n\n\n\n\n\n");
         return true;
       }else{
-        console.log("failed increment orderID doesnt exist "+ orderID);
+        console.log("failed increment orderID doesnt exist "+ orderID+"\n\n\n\n\n\n\n\n");
         return false;
       }
     }
@@ -238,11 +239,13 @@ export default class Database {
             const db = firebase.firestore();
             let doc = db.collection("users").doc(userPhone);
             global.observer = doc.onSnapshot(docSnapshot => {
+              console.log(docSnapshot.data().currentOrders);
                 docSnapshot.data().currentOrders.forEach(function(item, index, array) {
                     arrayOfOrders[index] = item;
-            }, err => {
-                console.log('Encountered error: ${err}');
-            });
+                }, err => {
+                    console.log('Encountered error: ${err}');
+                });
+              });
         }
 
         async unsubOrders(){
