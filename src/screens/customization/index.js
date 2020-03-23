@@ -7,7 +7,6 @@ import {
   FlatList,
   Picker
 } from 'react-native';
-import { Dropdown } from 'react-native-material-dropdown';
 
 import TopLogo from '../../components/toplogo/index';
 
@@ -57,7 +56,7 @@ export default class CustomizationScreen extends Component {
                 }}>
                   <Text style={[FONT_TITLE,{color: 'white'}]}>{item['meta']['name']}</Text>
                   <Text style={[FONT_TITLE,{color: 'white'}]}>{item['meta']['alt_name']}</Text>
-                </View>              
+                </View>
               </View>
             )
           }
