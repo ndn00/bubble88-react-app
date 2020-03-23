@@ -8,10 +8,10 @@ const itemReducer = (state=[], action) => {
     case UPDATE_ITEM:
       return [...state, action.payload];
     case DELETE_ITEM:
-      for( var i = 0; i < state.length; i++){
+      for ( let i = 0; i < state.length; i++) {
         if (state[i].english_name === action.payload) {
-           state.splice(i, 1);
-           break
+          state.splice(i, 1);
+          break;
         }
       }
       return [...state];
