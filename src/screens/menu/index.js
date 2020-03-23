@@ -66,7 +66,7 @@ class MenuScreen extends Component {
   //     update.uniqueKey = props.route.params.key
   //   if(props.route.params.category !== undefined)
   //     update.initIndex = MenuScreen.categoryIndex(props.route.params.category)
-    
+
   //   return update;
   // }
 
@@ -81,6 +81,7 @@ class MenuScreen extends Component {
 
   handleAdd = item => {
     this.props.addItem(item)
+    this.props.navigation.navigate('Customize', {item:item, customizations: bubble88['Customisations']})
   }
 
   render() {
