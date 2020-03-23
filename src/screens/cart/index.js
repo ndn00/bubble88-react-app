@@ -27,6 +27,8 @@ class CartScreen extends Component {
     this.updateCost()
   }
 
+
+
   componentDidMount() {
     this.updateCost()
   }
@@ -43,6 +45,10 @@ class CartScreen extends Component {
       totalCost += parseFloat(this.props.items[i].price)
     }
     this.setState({cost: totalCost})
+  }
+
+  handleMove = () => {
+    this.props.navigation.navigate('Confirm')
   }
 
   render() {
@@ -68,7 +74,7 @@ class CartScreen extends Component {
           <PaymentWidget subtotal={this.state.cost} tax={5} discount={10.00}/>
         </View>
         <View style={styles.container2}>
-          <BigButton title='Checkout (Pickup)' onPress={null}/>
+          <BigButton title='Checkout (Pickup)' onPress={this.handleMove}/>
         </View>
       </View>
     );
@@ -88,7 +94,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
   },
   container2: {
-    justifyContent: 'flex-end', 
+    justifyContent: 'flex-end',
     alignItems: 'center',
     marginBottom: MARGIN/2,
   },
