@@ -1,4 +1,5 @@
 import firebase from './Firestore';
+import json from './../src/mock_db/menu.json'
 
 /*
     restaurants collection doc format:
@@ -66,7 +67,7 @@ export default class Database {
          if (await orderRef.get().then(doc=>{return !doc.exists})) {
             const userRef = db.collection("users").doc(userPhone);
             if (await userRef.get().then(doc=>{return doc.exists})) {
-              const orderData = {'firstName' : firstName, 'lastName':lastName, 'phoneNum':phoneNum ,'orderedItems':orderedItems,'address':address, 'note': note, 'state': 0};
+              const orderData = {'firstName' : firstName, 'lastName':lastName, 'phoneNum':phoneNum ,'orderedItems':orderedItems,'address':address, 'note': note, 'state': 1};
               await orderRef.set(orderData);
               await userRef.update({
                 "currentOrders": firebase.firestore.FieldValue.arrayUnion(restaurant+ "/"+orderNum)
@@ -96,6 +97,20 @@ export default class Database {
     const restaurantRef = db.collection('restaurants').doc(name);
     if (await restaurantRef.get().then(doc => {return !doc.exists})) {
       await restaurantRef.set({'banner':banner, 'categories':categories, 'food':food, 'nextONum': 0});
+      console.log('Added restaurant successfully');
+      return true;
+    } else {
+      console.log('restaurant already exists');
+      return false;
+    }
+  }
+
+  async addRestaurantJSON(restaurantName, JSONFile){
+    restaurantName = restaurantName.toLowerCase();
+    const db = firebase.firestore();
+    const restaurantRef = db.collection('restaurants').doc(restaurantName);
+    if (await restaurantRef.get().then(doc => {return !doc.exists})) {
+      await restaurantRef.set({'name':JSONFile.name, 'location':JSONFile.location, 'styles':JSONFile.styles, 'categories': JSONFile.categories, 'menu':JSONFile.menu, 'customisations':JSONFile.customisations});
       console.log('Added restaurant successfully');
       return true;
     } else {
@@ -176,18 +191,36 @@ export default class Database {
            }
     }
 
-    async inrementOrderState(orderID, restaurant){
+    async incrementOrderState(ORDER_ID, restaurant){
       const db = firebase.firestore();
       restaurant = restaurant.toLowerCase();
+      var orderID = ORDER_ID.toString();
       var orderRef = db.collection(restaurant+"Orders").doc(orderID);
       if (await orderRef.get().then(doc=>{return doc.exists})) {
         orderRef.update({
           state: firebase.firestore.FieldValue.increment(1)
         });
-        console.log("incremented order "+ orderID);
+        console.log("incremented order "+ orderID+"\n\n\n\n\n\n\n\n");
         return true;
       }else{
-        console.log("failed increment orderID doesnt exist "+ orderID);
+        console.log("failed increment orderID doesnt exist "+ orderID+"\n\n\n\n\n\n\n\n");
+        return false;
+      }
+    }
+
+    async decrementOrderState(ORDER_ID, restaurant){
+      const db = firebase.firestore();
+      restaurant = restaurant.toLowerCase();
+      var orderID = ORDER_ID.toString();
+      var orderRef = db.collection(restaurant+"Orders").doc(orderID);
+      if (await orderRef.get().then(doc=>{return doc.exists})) {
+        orderRef.update({
+          state: firebase.firestore.FieldValue.increment(-1)
+        });
+        console.log("incremented order "+ orderID+"\n\n\n\n\n\n\n\n");
+        return true;
+      }else{
+        console.log("failed increment orderID doesnt exist "+ orderID+"\n\n\n\n\n\n\n\n");
         return false;
       }
     }
@@ -238,11 +271,13 @@ export default class Database {
             const db = firebase.firestore();
             let doc = db.collection("users").doc(userPhone);
             global.observer = doc.onSnapshot(docSnapshot => {
+              console.log(docSnapshot.data().currentOrders);
                 docSnapshot.data().currentOrders.forEach(function(item, index, array) {
                     arrayOfOrders[index] = item;
-            }, err => {
-                console.log('Encountered error: ${err}');
-            });
+                }, err => {
+                    console.log('Encountered error: ${err}');
+                });
+              });
         }
 
         async unsubOrders(){
@@ -274,6 +309,7 @@ export default class Database {
 const db = new Database();
 //db.addRestaurant("D-Plus Pizza", 'fake_banner_url', "set of category objects","array of food objects");
 //db.addUser('999-999-9999','fakeemail@gmail.com', 'first_name', 'last_name');
+db.addRestaurantJSON('Bubble88',json);
 const array = [];
 db.realTimeUserOrders('999-999-9999', array)
 db.addOrder('999-999-9999','testRestaurant','first_name', 'last_name', '999-999-9999','some fancy water','some_address','allergy to peanuts').then(response=>{
