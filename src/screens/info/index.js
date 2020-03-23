@@ -24,40 +24,40 @@ export default class InfoScreen extends Component {
   render() {
     return (
       <ScrollView style={{flex: 1, backgroundColor: 'white'}}>
-      <View style={styles.container}>
-        <TopLogo />
-        <Image
-          style={styles.image}
-          source={require('../../../assets/bubble88.jpg')}
-        />
-        <View style={styles.infoBox}>
-          <Text style={FONT_TITLE}>Bubble 88</Text>
-          <Text style={FONT_TEXT}>#102 – 10209 King George Blvd , Surrey, BC</Text>
-          <Text style={FONT_TEXT}>Phone: (778) 395-8899</Text>
+        <View style={styles.container}>
+          <TopLogo />
+          <Image
+            style={styles.image}
+            source={require('../../../assets/bubble88.jpg')}
+          />
+          <View style={styles.infoBox}>
+            <Text style={FONT_TITLE}>Bubble 88</Text>
+            <Text style={FONT_TEXT}>#102 – 10209 King George Blvd , Surrey, BC</Text>
+            <Text style={FONT_TEXT}>Phone: (778) 395-8899</Text>
+          </View>
+          <View style={styles.mapContainer}>
+            <MapView
+              style={styles.mapStyle}
+              initialRegion={{
+                latitude: LATITUDE,
+                longitude: LONGITUDE,
+                latitudeDelta: LATITUDE_DELTA*0.5,
+                longitudeDelta: LONGITUDE_DELTA*0.5,
+              }}
+              scrollEnabled={true}
+            >
+              <Marker coordinate={{
+                latitude: LATITUDE,
+                longitude: LONGITUDE,
+              }}>
+                <Image
+                  styles={{height: 100, width: null}}
+                  source={require('../../../assets/location_box.png')}
+                />
+              </Marker>
+            </MapView>
+          </View>
         </View>
-        <View style={styles.mapContainer}>
-        <MapView
-          style={styles.mapStyle}
-          initialRegion={{
-            latitude: LATITUDE,
-            longitude: LONGITUDE,
-            latitudeDelta: LATITUDE_DELTA*0.5,
-            longitudeDelta: LONGITUDE_DELTA*0.5,
-          }}
-          scrollEnabled={true}
-        >
-          <Marker coordinate={{
-            latitude: LATITUDE,
-            longitude: LONGITUDE,
-          }}>
-              <Image
-                styles={{height: 100, width: null}}
-                source={require('../../../assets/location_box.png')}
-              />
-          </Marker>
-        </MapView>
-        </View>
-      </View>
       </ScrollView>
     );
   }
@@ -72,14 +72,14 @@ const styles = StyleSheet.create({
   image: {
     width: WIDTH - MARGIN*2,
     height: WIDTH * 0.6,
-    resizeMode:'cover',
-    borderRadius: MARGIN
+    resizeMode: 'cover',
+    borderRadius: MARGIN,
   },
   infoBox: {
     alignItems: 'center',
     borderWidth: 2,
     padding: MARGIN*0.5,
-    borderRadius: MARGIN
+    borderRadius: MARGIN,
   },
   mapContainer: {
     backgroundColor: 'gray',
