@@ -156,6 +156,7 @@ class ConfirmScreen extends React.Component {
 
   toDataBase = async() =>{
     var db = new Database();
+    db.addUser(this.state.phone, "N/A", this.state.firstname, this.state.lastname);
     return await db.addOrder(restaurantName, this.state.firstname, this.state.lastname, this.state.phone, this.props.items, this.state.address, this.state.notes);
   }
 
