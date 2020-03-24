@@ -81,7 +81,7 @@ class MenuScreen extends Component {
 
   handleAdd = item => {
     this.props.addItem(item)
-    this.props.navigation.navigate('Customize', {item:item, customizations: bubble88['Customisations']})
+    //this.props.navigation.navigate('Customize', {item:item, customizations: bubble88['Customisations']})
   }
 
   render() {
