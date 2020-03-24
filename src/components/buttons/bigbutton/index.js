@@ -13,6 +13,7 @@ export default class BigButton extends Component {
       <TouchableOpacity
         style={[styles.button, this.props.style]}
         onPress={this.props.onPress}
+        disabled={this.props.disabled}
       >
         <Text style={[FONT_BUTTON_LARGE, styles.buttonTextColor]}>
           {this.props.title}

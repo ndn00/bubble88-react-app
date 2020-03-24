@@ -25,7 +25,6 @@ yarn add react-native-elements
 yarn add react-native-scrollable-tab-view
 npm install --save react-redux
 npm install redux
-npm i react-native-material-dropdown
 ```
 
 

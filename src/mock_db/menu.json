@@ -1,12 +1,12 @@
 {
    "name":"Bubble 88",
-   "banners":{
-      "House beef brisket noodle":{
+   "banners":[
+      {
          "image_url":"<LINK>",
          "english_name":"House beef brisket noodle",
          "alt_name":"牛錦麵"
       }
-   },
+   ],
    "location":{
       "street_number":10209,
       "street_name":"King George Blvd",

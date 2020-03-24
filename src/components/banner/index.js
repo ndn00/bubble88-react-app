@@ -17,8 +17,8 @@ export default class Banner extends Component {
           source={this.props.image}
         />
         <View style={styles.textContainer}>
-          <Text style={FONT_TEXT}>{this.props.englishName}</Text>
           <Text style={FONT_TEXT}>{this.props.altName}</Text>
+          <Text style={FONT_TEXT}>{this.props.englishName}</Text>
         </View>
       </View>
     );

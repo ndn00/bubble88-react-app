@@ -5,11 +5,10 @@ import {
   StyleSheet,
   ScrollView,
   FlatList,
-  Picker
 } from 'react-native';
-import { Dropdown } from 'react-native-material-dropdown';
 
 import TopLogo from '../../components/toplogo/index';
+import CustomPicker from '../../components/custom_picker/index'
 
 import {
   WIDTH,
@@ -23,7 +22,7 @@ export default class CustomizationScreen extends Component {
   state = {
     item: null,
     customizations: [],
-    language: 'hel'
+    language: 'test'
   }
 
   componentWillMount() {
@@ -57,7 +56,8 @@ export default class CustomizationScreen extends Component {
                 }}>
                   <Text style={[FONT_TITLE,{color: 'white'}]}>{item['meta']['name']}</Text>
                   <Text style={[FONT_TITLE,{color: 'white'}]}>{item['meta']['alt_name']}</Text>
-                </View>              
+                </View>
+
               </View>
             )
           }
