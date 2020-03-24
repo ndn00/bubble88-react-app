@@ -57,12 +57,10 @@ export default class CustomizationScreen extends Component {
                   <Text style={[FONT_TITLE,{color: 'white'}]}>{item['meta']['name']}</Text>
                   <Text style={[FONT_TITLE,{color: 'white'}]}>{item['meta']['alt_name']}</Text>
                 </View>
-
               </View>
             )
           }
         </ScrollView>
-
       </View>
     );
   }

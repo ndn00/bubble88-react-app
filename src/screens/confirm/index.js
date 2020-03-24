@@ -7,10 +7,11 @@ import {
 } from 'react-native';
 import {TextInput} from 'react-native-paper';
 import TopLogo from '../../components/toplogo';
+import {connect} from 'react-redux';
 import {FONT_TITLE, FONT_TEXT, PRIMARY_COLOR, TERTIARY_COLOR, MARGIN, WIDTH} from '../../styles';
 import BigButton from '../../components/buttons/bigbutton';
 
-export default class ConfirmScreen extends Component {
+class ConfirmScreen extends Component {
 
   state = {
     firstName: "",
@@ -81,9 +82,70 @@ export default class ConfirmScreen extends Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  items: state.items,
+})
+
+export default connect(mapStateToProps)(ConfirmScreen)
+
+
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: 'white',
+  },
+  headerContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 10,
+    backgroundColor: '#B46486',
+  },
+  heading: {
+    color: 'white',
+    marginTop: 10,
+    fontSize: 22,
+    fontWeight: 'bold',
+  },
+  contentView: {
     flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  triangleLeft: {
+    position: 'absolute',
+    left: -20,
+    bottom: 0,
+    width: 0,
+    height: 0,
+    borderRightWidth: 20,
+    borderRightColor: 'white',
+    borderBottomWidth: 25,
+    borderBottomColor: 'transparent',
+    borderTopWidth: 25,
+    borderTopColor: 'transparent',
+  },
+  triangleRight: {
+    position: 'absolute',
+    right: -20,
+    top: 0,
+    width: 0,
+    height: 0,
+    borderLeftWidth: 20,
+    borderLeftColor: 'white',
+    borderBottomWidth: 25,
+    borderBottomColor: 'transparent',
+    borderTopWidth: 25,
+    borderTopColor: 'transparent',
+  },
+  inputContainerStyle: {
+    marginTop: 16,
+    width: '90%',
+  },
+  keyboardAvoidingView: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    backgroundColor: "transparent",
   },
   centered: {
     alignItems: 'center',
