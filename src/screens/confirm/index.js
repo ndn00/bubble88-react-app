@@ -10,6 +10,7 @@ import TopLogo from '../../components/toplogo';
 import {connect} from 'react-redux';
 import {FONT_TITLE, FONT_TEXT, PRIMARY_COLOR, TERTIARY_COLOR, MARGIN, WIDTH} from '../../styles';
 import BigButton from '../../components/buttons/bigbutton';
+import Database from '../../../firebase/Database'
 
 class ConfirmScreen extends Component {
 
@@ -27,6 +28,25 @@ class ConfirmScreen extends Component {
 
   onSumbit = () => {
     console.log(this.state)
+    console.log(this.props.items)
+    const cloud = new Database()
+    /*
+    cloud.addUser(
+      this.state.phoneNumber,
+      "",
+      this.state.firstName,
+      this.state.lastName
+    )
+    cloud.addOrder(
+      this.state.phoneNumber,
+      "Bubble88",
+      this.state.firstName,
+      this.state.lastName,
+      this.state.phoneNumber,
+      this.props.items,
+      "",
+      "")
+    */
   }
 
   validateForm = () => {
