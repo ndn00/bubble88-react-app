@@ -29,14 +29,14 @@ class ConfirmScreen extends Component {
   onSumbit = () => {
     console.log(this.state)
     console.log(this.props.items)
-    const cloud = new Database()
-    /*
+    let cloud = new Database();
+    console.log("hello");
     cloud.addUser(
       this.state.phoneNumber,
-      "",
+      "N/A",
       this.state.firstName,
       this.state.lastName
-    )
+    );
     cloud.addOrder(
       this.state.phoneNumber,
       "Bubble88",
@@ -45,8 +45,11 @@ class ConfirmScreen extends Component {
       this.state.phoneNumber,
       this.props.items,
       "",
-      "")
-    */
+      "");
+      cloud.incrementOrderState(
+        1,
+        "Bubble88",
+      );
   }
 
   validateForm = () => {
@@ -56,7 +59,7 @@ class ConfirmScreen extends Component {
        input.lastName.length >= 2) {
          this.setState({isFormValid: true})
        }
-    this.setState({isFormValid: true})
+    this.setState({isFormValid: false})
   }
 
   render() {
@@ -65,7 +68,7 @@ class ConfirmScreen extends Component {
         <View style={[styles.centered]}>
           <Text style={FONT_TITLE}>Order Confirmation</Text>
         </View>
-        <KeyboardAvoidingView style={[styles.container, styles.contentWrapper]}>
+        <View style={[styles.container, styles.contentWrapper]}>
           <View style={styles.formWrapper}>
             <Text style={FONT_TITLE}>First Name</Text>
             <TextInput
@@ -97,7 +100,7 @@ class ConfirmScreen extends Component {
           <View style={[styles.centered]}>
             <BigButton title='Confirm' onPress={this.onSumbit} disabled={!this.state.isFormValid}/>
           </View>
-        </KeyboardAvoidingView>
+        </View>
       </View>
     );
   }

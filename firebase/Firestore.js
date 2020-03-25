@@ -1,3 +1,10 @@
+import {decode, encode} from 'base-64'
+
+if (!global.btoa) {  global.btoa = encode }
+
+if (!global.atob) { global.atob = decode }
+
+import 'firebase/firestore';
 import firebase from 'firebase';
 
 const config = {
