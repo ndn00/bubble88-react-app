@@ -52,7 +52,7 @@ export default class Database {
      }
   }
 
-  async addOrder(userPhone, restaurant, firstName, lastName, phoneNum, orderedItems, address, note) {
+  async addOrder(userPhone, restaurant, firstName, lastName, orderedItems, address, note) {
          const db = firebase.firestore();
          restaurant = restaurant.toLowerCase();
          const restaurantRef = db.collection('restaurants').doc(restaurant);
@@ -67,7 +67,7 @@ export default class Database {
          if (await orderRef.get().then(doc=>{return !doc.exists})) {
             const userRef = db.collection("users").doc(userPhone);
             if (await userRef.get().then(doc=>{return doc.exists})) {
-              const orderData = {'firstName' : firstName, 'lastName':lastName, 'phoneNum':phoneNum ,'orderedItems':orderedItems,'address':address, 'note': note, 'state': 1};
+              const orderData = {'firstName' : firstName, 'lastName':lastName, 'phoneNum':userPhone ,'orderedItems':orderedItems,'address':address, 'note': note, 'state': 1};
               await orderRef.set(orderData);
               await userRef.update({
                 "currentOrders": firebase.firestore.FieldValue.arrayUnion(restaurant+ "/"+orderNum)
