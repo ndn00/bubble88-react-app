@@ -61,11 +61,11 @@ class ConfirmScreen extends Component {
 
   render() {
     return (
-      <KeyboardAvoidingView style={styles.container}>
+      <View style={styles.container}>
         <View style={[styles.centered]}>
           <Text style={FONT_TITLE}>Order Confirmation</Text>
         </View>
-        <View style={[styles.container, styles.contentWrapper]}>
+        <KeyboardAvoidingView style={[styles.container, styles.contentWrapper]}>
           <View style={styles.formWrapper}>
             <Text style={FONT_TITLE}>First Name</Text>
             <TextInput
@@ -97,8 +97,8 @@ class ConfirmScreen extends Component {
           <View style={[styles.centered]}>
             <BigButton title='Confirm' onPress={this.onSumbit} disabled={!this.state.isFormValid}/>
           </View>
-        </View>
-      </KeyboardAvoidingView>
+        </KeyboardAvoidingView>
+      </View>
     );
   }
 }
