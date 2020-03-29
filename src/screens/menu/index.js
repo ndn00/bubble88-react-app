@@ -7,7 +7,8 @@ import {
   ScrollView,
   StyleSheet,
   TouchableOpacity,
-  TouchableHighlight
+  TouchableHighlight,
+  Alert
 } from 'react-native';
 
 
@@ -80,7 +81,16 @@ class MenuScreen extends Component {
   // }
 
   handleAdd = item => {
-    this.props.addItem(item)
+    Alert.alert(
+      'Order confirmation',
+      'Would you like to confirm this order?',
+      [
+        {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+        {text: 'OK', onPress: () => this.props.addItem(item)},
+      ],
+      { cancelable: false }
+    )
+    // this.props.addItem(item)
     //this.props.navigation.navigate('Customize', {item:item, customizations: bubble88['Customisations']})
   }
 
