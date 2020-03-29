@@ -41,7 +41,7 @@ export default class BoxItem extends Component {
 const styles = StyleSheet.create({
   divCategory:{
     alignItems:'center',
-    borderWidth: 0,
+    borderWidth: 2,
     borderColor: TERTIARY_COLOR,
     borderRadius:MARGIN,
     padding: MARGIN/2,
