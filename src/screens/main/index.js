@@ -108,6 +108,6 @@ export default class MainScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: QUARTERNARY_COLOR,
+    backgroundColor: 'white',
   },
 });

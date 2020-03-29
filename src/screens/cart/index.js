@@ -48,7 +48,7 @@ class CartScreen extends Component {
   }
 
   handleMove = () => {
-    this.props.navigation.navigate('Confirm')
+    this.props.navigation.navigate('Confirm', {cost: this.state.cost})
   }
 
   render() {
