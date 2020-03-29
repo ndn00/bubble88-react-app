@@ -57,9 +57,10 @@ class ConfirmScreen extends Component {
     if (input.phoneNumber.length === 10 &&
        input.firstName.length >= 2 &&
        input.lastName.length >= 2) {
-         this.setState({isFormValid: true})
-       }
-    this.setState({isFormValid: false})
+         this.setState({isFormValid: true});
+    }else{
+      this.setState({isFormValid: false});
+    }
   }
 
   render() {
