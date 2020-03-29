@@ -20,25 +20,36 @@ class ConfirmScreen extends Component {
     firstName: "",
     lastName: "",
     phoneNumber: "",
-    isFormValid: false
   }
 
   getHandler = key => val => {
     this.setState({[key]: val})
-    this.validateForm()
   }
 
   onSumbit = () => {
-    Alert.alert(
-      'Confirmation 😋',
-       "The order will be submitted to Bubble88." + "\n" + "\n" +
-       `Total: ${this.props.route.params.cost}`,
-      [
-        {text: 'Cancel', onPress: () => console.log("canceled"), style: 'cancel'},
-        {text: 'Confirm', onPress: () => this.onSend()},
-      ],
-      { cancelable: false }
-    )
+    var isFormValid = this.validateForm()
+    if (isFormValid) {
+      Alert.alert(
+        'Confirmation 😋',
+         "The order will be submitted to Bubble88." + "\n" + "\n" +
+         `Total:$ ${this.props.route.params.cost}`,
+        [
+          {text: 'Cancel', onPress: () => console.log("canceled"), style: 'cancel'},
+          {text: 'Confirm', onPress: () => this.onSend()},
+        ],
+        { cancelable: false }
+      )
+    }
+    else {
+      Alert.alert(
+        'Error in input',
+        'Please check your name and phone number input.',
+        [
+          {text: "Ok",  onPress: () => console.log("OK"), style: 'cancel'}
+        ],
+        { cancelable: false }
+      )
+    }
   }
 
   onSend = () => {
@@ -73,9 +84,9 @@ class ConfirmScreen extends Component {
     if (input.phoneNumber.length === 10 &&
        input.firstName.length >= 2 &&
        input.lastName.length >= 2) {
-         this.setState({isFormValid: true});
+         return true
     }else{
-      this.setState({isFormValid: false});
+      return false
     }
   }
 

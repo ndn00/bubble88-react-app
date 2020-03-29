@@ -112,15 +112,18 @@ class MenuScreen extends Component {
         >
         {categories.map(category => (
           <FlatList
-          tabLabel={category.title}
-          data={bubble88['menu']}
-          renderItem={({item}) =>
-            ((item.category===category.title || category.title==='All')&&<MenuItem item={{
-              image: 'http://www.bubble88.com/wp-content/uploads/2015/03/noodle.jpg',
-              name: item.english_name + '\n' + item.alt_name,
-              price: item.price,
-              handleSubmit: ()=>this.handleAdd(item),
-            }}/>)}
+            tabLabel={category.title}
+            data={bubble88['menu']}
+            renderItem={({item}) =>
+              ((item.category===category.title || category.title==='All')&&
+                <MenuItem item={{
+                  image: 'http://www.bubble88.com/wp-content/uploads/2015/03/noodle.jpg',
+                  name: item.english_name + '\n' + item.alt_name,
+                  price: item.price,
+                  handleSubmit: ()=>this.handleAdd(item),
+                }}/>
+            )
+          }
           keyExtractor = {(item, index) => index.toString() }
         />
         ))}
