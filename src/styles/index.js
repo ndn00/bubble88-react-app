@@ -7,21 +7,21 @@ export const QUARTERNARY_COLOR = '#f2f2f2'; // light gray
 // Fonts
 export const FONT_BUTTON_LARGE = {
   fontSize: 20,
-  fontFamily: 'Roboto',
+  //fontFamily: 'Roboto',
   fontWeight: 'bold',
 };
 export const FONT_BUTTON_SMALL = {
   fontSize: 14,
-  fontFamily: 'Roboto',
+  //fontFamily: 'Roboto',
 };
 export const FONT_TITLE = {
   fontSize: 20,
-  fontFamily: 'Roboto',
+  //fontFamily: 'Roboto',
   fontWeight: 'bold',
 };
 export const FONT_TEXT = {
   fontSize: 16,
-  fontFamily: 'Roboto',
+  //fontFamily: 'Roboto',
 };
 
 // Spacings
