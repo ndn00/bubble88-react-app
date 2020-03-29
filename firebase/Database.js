@@ -60,13 +60,13 @@ export default class Database {
                 let orderNum = doc.data().nextONum;
                 t.update(restaurantRef,{'nextONum': doc.data().nextONum+1});
                 return Promise.resolve(orderNum);
-            });
-         });
+            })
+         })
          const orderRef = db.collection(restaurant+"Orders").doc(orderNum.toString());
          if (await orderRef.get().then(doc=>{return !doc.exists})) {
             const userRef = db.collection("users").doc(userPhone);
             if (await userRef.get().then(doc=>{return doc.exists})) {
-              const orderData = {'firstName' : firstName, 'lastName':lastName, 'phoneNum':phoneNum ,'orderedItems':orderedItems,'address':address, 'note': note, 'state': 1};
+              const orderData = {'firstName' : firstName, 'lastName':lastName, 'phoneNum':phoneNum ,'orderedItems':orderedItems,'address':address, 'note': note, 'state': 1, 'id':orderNum, 'orderTime':firebase.firestore.FieldValue.serverTimestamp() };
               await orderRef.set(orderData);
               await userRef.update({
                 "currentOrders": firebase.firestore.FieldValue.arrayUnion(restaurant+ "/"+orderNum)
@@ -109,7 +109,7 @@ export default class Database {
     const db = firebase.firestore();
     const restaurantRef = db.collection('restaurants').doc(restaurantName);
     if (await restaurantRef.get().then(doc => {return !doc.exists})) {
-      await restaurantRef.set({'name':JSONFile.name, 'location':JSONFile.location, 'styles':JSONFile.styles, 'categories': JSONFile.categories, 'menu':JSONFile.menu, 'customisations':JSONFile.customisations, 'nextONum': 0});
+      await restaurantRef.set({'name':JSONFile.name, 'location':JSONFile.location, 'styles':JSONFile.styles, 'categories': JSONFile.categories, 'menu':JSONFile.menu, 'customisations':JSONFile.customisations});
       console.log('Added restaurant successfully');
       return true;
     } else {
@@ -270,7 +270,7 @@ export default class Database {
             const db = firebase.firestore();
             let doc = db.collection("users").doc(userPhone);
             global.observer = doc.onSnapshot(docSnapshot => {
-              console.log(docSnapshot.data().currentOrders);
+              //console.log(docSnapshot.data().currentOrders);
                 docSnapshot.data().currentOrders.forEach(function(item, index, array) {
                     arrayOfOrders[index] = item;
                 }, err => {
@@ -282,19 +282,32 @@ export default class Database {
         async unsubOrders(){
           global.observer();
         }
+        async unsubOrdersR(){
+          global.rObserver();
+        }
 
         async realTimeRestaurantOrders(restaurant, state, arrayOfOrders){
+          restaurant = restaurant.toLowerCase();
+          const db = firebase.firestore();
           if(state<0){                        //return orders of all states
-            const db = firebase.firestore();
-            global.rObserver =  db.collections(restaurant+"Orders").onSnapshot(query =>{
+            global.rObserver =  db.collection(restaurant+"Orders").onSnapshot(query =>{
               query.docChanges().forEach(change => {
-                  arrayOfOrders.arrayUnion(change.doc.data())
+                  console.log("\n\n\n\n\n\n"+change.type+"\n\n\n\n\n\n\n");
+                  if(change.type == "added"){
+                    arrayOfOrders.push(change.doc.data());
+                  }else if(change.type == "modified"){
+                    for(var i=0; i<arrayOfOrders.length; i++){
+                      if(arrayOfOrders[i].id === change.doc.data().id){
+                        arrayOfOrders.splice(i,1,change.doc.data());
+                      }
+                    }
+                  }
               });
             });
           }else if (state<=3){                //returns unconfirmed orders
-            global.rObserver =  db.collections(restaurant+"Orders").where('state'==state).onSnapshot(query =>{
+            global.rObserver =  db.collection(restaurant+"Orders").where('state','==',state).onSnapshot(query =>{
                 query.docChanges().forEach(change => {
-                    arrayOfOrders.arrayUnion(change.doc.data())
+                    arrayOfOrders.push(change.doc.data());
                 });
             });
           }else{
@@ -305,20 +318,31 @@ export default class Database {
 }
 
 
-const db = new Database();
+//const db = new Database();
 //db.addRestaurant("D-Plus Pizza", 'fake_banner_url', "set of category objects","array of food objects");
 //db.addUser('999-999-9999','fakeemail@gmail.com', 'first_name', 'last_name');
+//db.addRestaurantJSON('Bubble88',json);
+/*
 const array = [];
+const arrayR = [];
 db.realTimeUserOrders('999-999-9999', array)
+db.realTimeRestaurantOrders('testRestaurant',0, arrayR)
 db.addOrder('999-999-9999','testRestaurant','first_name', 'last_name', '999-999-9999','some fancy water','some_address','allergy to peanuts').then(response=>{
-  console.log("array is "+ array);
-  db.unsubOrders();
-})
+  //console.log("array is "+ array);
+  //console.log("array is "+ arrayR);
+  db.addOrder('999-999-9999','testRestaurant','first_name', 'last_name', '999-999-9999','some fancy water','some_address','allergy to peanuts').then(response=>{
+    //console.log("array is "+ array);
+    console.log("array is "+ arrayR[1].address);
+    db.unsubOrders();
+    db.unsubOrdersR();
+  })
+
+})*/
 //db.editOrder('0','testRestaurant','real_first', 'real_last', '777-777-7777', 'some edited fancy water','some_address','note: allergy to peanuts',0)
 //db.editRestaurant('testRestaurant', 'fake_banner_url', "set of category objects","array of food objects",0)
 //db.editUser('999-999-9999', 'totallyrealemail@gmail.com', 'first_name', 'last_name', [])
 //db.inrementOrderState('0','testRestaurant')
-const responseR = db.getRestaurant('testRestaurant').then(responseR=>{
+/*const responseR = db.getRestaurant('testRestaurant').then(responseR=>{
     if(responseR!=null){
         console.log('the queried restaurant data ' +responseR.food+', '+ responseR.nextONum+'\n');
     }else{
@@ -341,7 +365,7 @@ const responseO = db.getOrder(0,'testRestaurant').then(responseO=>{
         console.log('order data not found\n');
     }
 return;
-})
+})*/
 
 /*
 db.deleteRestaurant('testRestaurant');
