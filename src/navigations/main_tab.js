@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Ionicons} from '@expo/vector-icons';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
+import MenuScreen from '../screens/menu/index';
 import MainScreen from '../screens/main/index';
 import CustomizeStack from './customize_stack';
 import ConfirmStack from './confirm_stack';
@@ -32,7 +33,7 @@ export default function TabNavigator() {
       }}
     >
       <Tab.Screen name="Main" component={MainScreen} />
-      <Tab.Screen name="Menu" component={CustomizeStack} />
+      <Tab.Screen name="Menu" component={MenuScreen} />
       <Tab.Screen name="Cart" component={ConfirmStack} />
       <Tab.Screen name="Info" component={InfoScreen} />
     </Tab.Navigator>
