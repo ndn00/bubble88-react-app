@@ -14,6 +14,7 @@ import TopLogo from '../../components/toplogo/index';
 import Banner from '../../components/banner/index';
 import HorizontalList from '../../components/horizontal_list/index'
 import {FONT_TITLE, FONT_TEXT, MARGIN, BANNER_SIZE, TERTIARY_COLOR, QUARTERNARY_COLOR} from '../../styles/index';
+import OrderItem from '../../components/order_item';
 
 const banners = [
   {
@@ -95,11 +96,15 @@ export default class MainScreen extends Component {
             }
           </Swiper>
         </View>
-        <View style={{left: MARGIN}}>
+        {/* <View style={{left: MARGIN}}>
           <Text style={FONT_TITLE}>Categories</Text>
           <Text style={FONT_TITLE}>菜色分類</Text>
         </View>
-        <HorizontalList data={categories} onPress={this.onPressCategory}/>
+        <HorizontalList data={categories} onPress={this.onPressCategory}/> */}
+        <View style={{left: MARGIN}}>
+          <Text style={FONT_TITLE}>My Orders</Text>
+        </View>
+        <OrderItem id="FS9F8SS9FS" status='1' />
       </View>
     );
   }
